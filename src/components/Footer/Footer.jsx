@@ -126,7 +126,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div class="w-full mt-5">
+          <div class="w-full mt-8">
             <div class="flex flex-col md:flex-row items-start sm:items-center gap-8 md:gap-14">
               <div class="w-44 flex justify-center items-center">
                 <img src="logo.png" alt="" />
