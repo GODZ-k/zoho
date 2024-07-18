@@ -118,11 +118,10 @@ function Footer() {
             </div>
             <div class="flex flex-col items-start gap-3 w-60">
               <h1 class="font-semibold text-lg">
-                Prayosha Food Services Private Limited
+                K & A Technology Pvt Ltd.
               </h1>
               <div className=" text-gray-700">
-                3rd Floor, Tower-A, Gopal Palace, Nehrunagar, Ambawadi,
-                Ahmedabad, Gujarat - 380015
+              E-23, First Floor, E Block, Sector 63, Noida, Uttar Pradesh 201301
               </div>
             </div>
           </div>
