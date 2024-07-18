@@ -6,6 +6,7 @@ import SuitesComp from "./SuitesComp";
 function Navbar() {
   const [product, setProduct] = useState(false);
   const [company, setCompany] = useState(false);
+  const [socialstep, setSocialStep] =  useState(false)
   const [AppComp, setAppComp] = useState(true);
 //   const [SuitesCompData, setSuitesComp] = useState(false);
 //   const [activeSubNav, setActiveSubNav] = useState("Apps");
@@ -52,7 +53,7 @@ function Navbar() {
         ],
     },
     {
-      name: "Customer",
+      name: "Pricing",
     },
     {
       name: "Company",
@@ -75,19 +76,19 @@ function Navbar() {
       ],
     },
     {
-      name: "More",
+      name: "Social Steps",
       subItem: [
         {
-          name: "Blog",
+          name: "Instagram",
         },
         {
-          name: "Community",
+          name: "Facebook",
         },
         {
-          name: "Support",
+          name: "Career",
         },
         {
-          name: "Contact us",
+          name: "X",
         },
       ],
     },
@@ -114,11 +115,19 @@ function Navbar() {
   function handlecompanyDropdown() {
     setCompany(!company);
     setProduct(false);
+    setSocialStep(false)
+  }
+
+  function handleSocialStepDropdown(){
+    setCompany(false)
+    setProduct(false)
+    setSocialStep(!socialstep)
   }
 
 function handleProductDropdown() {
     setProduct(!product)
     setCompany(false);
+    setSocialStep(false)
   }
 
   function handleNavbar() {
@@ -163,6 +172,7 @@ function handleProductDropdown() {
       if (ref.current && !ref.current.contains(event.target)) {
         setCompany(false);
         setProduct(false)
+        setSocialStep(false)
       }
     }
 
@@ -213,7 +223,6 @@ function handleProductDropdown() {
                     }`}
                   ></i>
                 </li>
-                <li className="cursor-pointer">Customer</li>
                 <li
                   onClick={handlecompanyDropdown}
                   className="flex gap-2 items-center cursor-pointer"
@@ -225,10 +234,27 @@ function handleProductDropdown() {
                     }`}
                   ></i>
                 </li>
+                <li className="cursor-pointer">Pricing</li>
+
               </ul>
             </div>
           </div>
           <div className="hidden lg:flex gap-4">
+          <div className=" pl-0 sm:pl-10 gap-4 flex items-center">
+              <ul className="font-light gap-8 flex">
+                <li
+                  onClick={handleSocialStepDropdown}
+                  className="flex gap-2 items-center cursor-pointer"
+                >
+                  <div>Social Steps</div>
+                  <i
+                    className={`text-sm fa-solid ${
+                      socialstep ? "fa-chevron-up" : "fa-chevron-down"
+                    }`}
+                  ></i>
+                </li>
+              </ul>
+          </div>
             <button className="text-gray-700 ">Sign in</button>
             <button className={`${isScrolled ? 'bg-[#f60014] text-white' : 'bg-transparent text-[#f60014]'} hover:text-white hover:bg-[#f60014] transition-all ease-in-out duration-300 px-4 py-1.5 rounded-sm border border-[#f60014] `}>
               Sign up
@@ -260,11 +286,25 @@ function handleProductDropdown() {
           ref={ref}
           className={`transition-all duration-150 ${
             company ? "translate-y-0" : "opacity-0 translate-y-4"
-          } absolute left-[24rem] top-[4.5rem] w-60  rounded-md px-6 py-2 bg-white`}
+          } absolute left-[19rem] top-[4.5rem] w-60  rounded-md px-6 py-2 bg-white`}
         >
           <div>
             <ul>
               {subNavData[2].subItem.map((item)=>(
+                <li key={item.name} className="pb-3">{item.name}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div
+          ref={ref}
+          className={`transition-all duration-150 ${
+            socialstep ? "translate-y-0" : "opacity-0 translate-y-4"
+          } absolute right-[8rem] top-[4.5rem] w-48  rounded-md px-6 py-2 bg-white`}
+        >
+          <div>
+            <ul className="">
+              {subNavData[3].subItem.map((item)=>(
                 <li key={item.name} className="pb-3">{item.name}</li>
               ))}
             </ul>
