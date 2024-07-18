@@ -91,7 +91,7 @@ function Footer() {
               </ul>
             </div>
             <div class="flex flex-col items-start gap-3">
-              <h1 class="font-semibold text-lg pb-3">Resources</h1>
+              <h1 class="font-semibold text-lg pb-3">Social Steps</h1>
               <ul class="flex justify-center text-gray-700 flex-col gap-4">
                 <li>
                   <Link>Pricing</Link>
