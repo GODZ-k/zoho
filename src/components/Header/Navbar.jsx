@@ -227,7 +227,7 @@ function handleProductDropdown() {
                   onClick={handlecompanyDropdown}
                   className="flex gap-2 items-center cursor-pointer"
                 >
-                  <div>Company</div>
+                  <div>Intergration</div>
                   <i
                     className={`text-sm fa-solid ${
                       company ? "fa-chevron-up" : "fa-chevron-down"
