@@ -53,7 +53,10 @@ function Home_page() {
             <div className=" flex justify-center lg:justify-start">
               <button className=" relative  flex justify-between gap-10 bg-[#ffde48] rounded-sm text-black font-semibold px-6 py-4">
                 <div className=" text-[18px]">Click for free Demo</div>
-                <i className=" absolute right-0 -bottom-5 text-4xl text-black fa-solid fa-arrow-pointer"></i>
+                {/* <i className=" absolute right-0 -bottom-5 text-4xl text-black fa-solid fa-arrow-pointer"></i> */}
+                <div className=" absolute -right-2 -bottom-2 w-8 h-8">
+                <img className=" w-full h-full " src="icon.png" alt="" />
+                </div>
               </button>
             </div>
             <div className=" w-full lg:w-[70%] -bottom-0 left-24 lg:absolute z-[-1]">
