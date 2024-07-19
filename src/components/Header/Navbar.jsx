@@ -240,7 +240,7 @@ function handleProductDropdown() {
             </div>
           </div>
           <div className="hidden lg:flex gap-4">
-          <div className=" pl-0 sm:pl-10 gap-4 flex items-center">
+          <div className=" pl-0 pr-3 sm:pl-10 gap-4 flex items-center">
               <ul className="font-light gap-8 flex">
                 <li
                   onClick={handleSocialStepDropdown}
