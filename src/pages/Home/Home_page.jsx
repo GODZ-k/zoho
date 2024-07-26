@@ -41,18 +41,17 @@ function Home_page() {
         <div className=" w-full text-center lg:text-start  lg:w-[35%] px-2 xl:px-14">
           <div>
             <div className=" text-5xl text-black pb-8">
-              The secret to Restaurants' success!
+            The all solution with achieving success of restaurants
             </div>
             <div className=" text-[22px] mt-5 mb-10 font-light">
-              Manage your resaturant with-instant access, automate proccesses
-              and a commitment to sustainability
+            Done by us streamlines restaurant operations, offering contactless dining solutions for efficient management and enhanced customer experience.
             </div>
             <div className=" font-semibold  mt-5 mb-10 text-lg md:text-[18px]">
               Let the flavour meets innovation with Paperless soultion!
             </div>
             <div className=" flex justify-center lg:justify-start">
               <button className=" relative  flex justify-between gap-10 bg-[#ffde48] rounded-sm text-black font-semibold px-6 py-4">
-                <div className=" text-[18px]">Click for free Demo</div>
+                <div className=" text-[18px]">Book A Free Demo</div>
                 {/* <i className=" absolute right-0 -bottom-5 text-4xl text-black fa-solid fa-arrow-pointer"></i> */}
                 <div className=" absolute -right-2 -bottom-2 w-8 h-8">
                 <img className=" w-full h-full " src="icon.png" alt="" />
