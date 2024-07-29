@@ -313,17 +313,19 @@ function handleProductDropdown() {
       </nav>
 
       {/* mobile and tablet view */}
-      <nav className=" fixed lg:hidden bottom-0 left-0 w-full">
+      <nav className=" z-10 fixed lg:hidden bottom-0 left-0 w-full">
         <div className=" flex">
           <button
             onClick={handleNavbar}
             className=" py-4 px-5 text-xl bg-black text-white"
           >
-            {navbar ? (
+            {/* {navbar ? (
               <i className="fa-solid fa-xmark"></i>
             ) : (
               <i className="fa-solid fa-bars"></i>
-            )}
+            )} */}
+            <i className="fa-solid fa-bars"></i>
+
           </button>
           <button
             className={`${

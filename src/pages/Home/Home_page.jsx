@@ -4,39 +4,52 @@ import { HomeCard, Nav_Cards } from "../../components";
 function Home_page() {
   const featuredApps = [
     {
-      name: "Social",
+      name: "Paperless Billing",
       to: "/",
-      content: "Comprehensive CRM platform for customer-facing teams.",
-      icon: <i className="fas fa-users"></i>,
+      content: "",
+      icon: "Billing4.png",
     },
     {
-      name: "Social",
+      name: "QR based Ordering",
       to: "/",
-      content: "Comprehensive CRM platform for customer-facing teams.",
-      icon: <i className="fas fa-users"></i>,
+      content: "",
+      icon: "Billing3.png",
     },
     {
-      name: "Social",
+      name: "Detailing Reports",
       to: "/",
-      content: "Comprehensive CRM platform for customer-facing teams.",
-      icon: <i className="fas fa-users"></i>,
+      content: "",
+      icon: "POS2.png",
     },
     {
-      name: "Social",
+      name: "CRM Automation",
       to: "/",
-      content: "Comprehensive CRM platform for customer-facing teams.",
-      icon: <i className="fas fa-users"></i>,
+      content: "",
+      icon: "CRM2.png",
     },
     {
-      name: "Social",
+      name: "Digital Menu",
       to: "/",
-      content: "Comprehensive CRM platform for customer-facing teams.",
-      icon: <i className="fas fa-users"></i>,
+      content: "",
+      icon: "digitalMenu.png",
+    },
+    {
+      name: "Inventory Tracking & Waste Control",
+      to: "/",
+      content: "",
+      icon: "Inventory1.png",
+    },
+    {
+      name: "Staff, Kitchen and Admin Applications",
+      to: "/",
+      content: "",
+      icon: "skaapp.png",
     },
   ];
 
   return (
     <div>
+      {/* home banner */}
       <div className=" px-5 sm:px-0 relative z-[-1] flex lg:flex-row gap-12 lg:gap-0 flex-col items-center lg:items-start justify-evenly flex-wrap pt-[30%] sm:pt-40 pb-20 bg-[#f8f9fb]">
         <div className=" w-full text-center lg:text-start  lg:w-[35%] px-2 xl:px-14">
           <div>
@@ -73,7 +86,7 @@ function Home_page() {
             <div className=" absolute uppercase -top-6 text-white bg-red-500 px-5 py-3 rounded-3xl font-semibold">
               Why QRDine-IN?
             </div>
-            <div className=" border-b border-b-gray-300">
+            <div>
               <div>
                 {featuredApps.map((item) => (
                   <HomeCard
@@ -85,7 +98,7 @@ function Home_page() {
                 ))}
               </div>
             </div>
-            <div className=" flex justify-between text-blue-400  pt-6">
+            {/* <div className=" flex justify-between text-blue-400  pt-6">
               <button className=" uppercase font-semibold text-blue-500">
                 {" "}
                 Exploree all products
@@ -93,10 +106,12 @@ function Home_page() {
               <div>
                 <i class="fa-solid fa-chevron-right"></i>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
+
+      {/* company showcase */}
       <div className=" lg:mb-0 py-16 lg:py-32 flex px-4 justify-evenly lg:flex-row flex-col items-center lg:items-start  w-full bg-yellow-400">
         <div className=" flex gap-6 flex-col sm:flex-row w-full  lg:w-[40rem] border-b lg:border-r border-b-[#d0b31c] lg:border-b-0 pb-20 lg:pb-0 lg:border-r-[#d0b31c] border-dashed">
           <div className=" w-40 sm:w-96">
@@ -287,7 +302,7 @@ function Home_page() {
         </div>
         <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
           <div className=" text-start sm:text-center md:text-start  text-3xl lg:text-4xl font-semibold lg:leading-10">
-          Transforming Restaurants with QR-Based Ordering Systems
+            Transforming Restaurants with QR-Based Ordering Systems
           </div>
           <div className=" text-start sm:text-center md:text-start text-gray-700 >text-base lg:text-lg lg:leading-8">
             Experience effortless management of orders, menus, and payments with
@@ -297,7 +312,7 @@ function Home_page() {
         </div>
       </div>
       {/* Sales report  */}
-       <div className=" px-10 md:px-14 flex gap-8  mb-5  flex-col-reverse items-center md:items-start md:flex-row justify-center w-full">
+      <div className=" px-10 md:px-14 flex gap-8  mb-5  flex-col-reverse items-center md:items-start md:flex-row justify-center w-full">
         <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
             src="sales_report.png"
@@ -307,11 +322,11 @@ function Home_page() {
         </div>
         <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
           <div className=" text-start sm:text-center md:text-start  text-3xl lg:text-4xl font-semibold lg:leading-10">
-          Enhancing Business Performance with Real-time Insights and Detailed
-          Reports
+            Enhancing Business Performance with Real-time Insights and Detailed
+            Reports
           </div>
           <div className=" text-start sm:text-center md:text-start text-gray-700 >text-base lg:text-lg lg:leading-8">
-          Upgrade to real-time insights and detailed reports with our POS
+            Upgrade to real-time insights and detailed reports with our POS
             system. Trusted by clients for years, it gives your restaurant the
             edge in performance.
           </div>
@@ -319,7 +334,6 @@ function Home_page() {
       </div>
 
       {/* crm qrdine  */}
-
       <div className=" bg-[#ffe988] flex justify-between  flex-col lg:flex-row px-5 sm:px-10 lg:px-20 xl:px-40 py-20 w-full items-center">
         <div className=" w-full text-start lg:w-[40%]">
           <div className=" text-3xl lg:text-4xl pb-10 font-semibold">
@@ -338,6 +352,22 @@ function Home_page() {
         </div>
         <div className=" w-full sm:w-[30rem] lg:w-[50%]">
           <img src="crm.png" className=" h-full w-full" alt="" />
+        </div>
+      </div>
+
+      {/* integration */}
+
+      <div className=" px-5 sm:px-10 lg:px-20 xl:px-40 flex md:flex-row flex-col gap-5 pt-20 md:pt-10 justify-between items-center">
+        <div className=" w-full md:w-[40rem]">
+          <div className=" text-4xl xl:text-5xl text-[#ffd000] font-semibold mb-3">One dashboard,</div>
+          <div className=" text-2xl xl:text-3xl font-semibold mb-3">multiple integrations made easy.</div>
+          <div className=" text-gray-900 text-lg leading-6">
+            Manage all restaurant services from a single screen, anyway you
+            choose—mobile phone, tablet, laptop, or desktop.
+          </div>
+        </div>
+        <div className=" w-full md:w-[40rem]">
+          <img src="oneScreenIntr.png" className=" h-full w-full object-cover object-center" alt="" />
         </div>
       </div>
 
@@ -361,10 +391,14 @@ function Home_page() {
         </button>
       </div>
 
-{/* All in one resturants */}
-<div className=" w-full">
-  <img className=" object-cover object-center w-full h-full" src="allResturants.jpg" alt="" />
-</div>
+      {/* All in one resturants */}
+      <div className=" w-full bg-[#fff0ad]">
+        <img
+          className=" object-cover object-center w-full h-full"
+          src="allrestaurants.jpg"
+          alt=""
+        />
+      </div>
       {/* free demo form */}
       <div className=" flex justify-center w-full bg-white py-14 px-6 ">
         <div className=" flex flex-col-reverse justify-center items-center md:flex-row gap-16 w-[60rem] ">
