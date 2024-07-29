@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeCard, Nav_Cards } from "../../components";
+import { All_in_one_res_card, HomeCard, Nav_Cards } from "../../components";
 
 function Home_page() {
   const featuredApps = [
@@ -47,6 +47,62 @@ function Home_page() {
     },
   ];
 
+  const allInOneItems =[
+    {
+      icon:"FineDine.jpg"
+    },
+    {
+      icon:"CasualDining.jpg"
+    },
+    {
+      icon:"Bar&Brewery.jpg"
+    },
+    {
+      icon:"Cafe.jpg"
+    },
+    {
+      icon:"Pizzeria.jpg"
+    },
+    {
+      icon:"FastCasual.jpg"
+    },
+    {
+      icon:"CloudKitchens.jpg"
+    },
+    {
+      icon:"FoodTruck.jpg"
+    },
+    {
+      icon:"FastFood.jpg"
+    },
+    {
+      icon:"Bistros.jpg"
+    },
+    {
+      icon:"Brasseries.jpg"
+    },
+    {
+      icon:"LargeFoodChains.jpg"
+    },
+    {
+      icon:"Ice-Creams&Desserts.jpg"
+    },
+    {
+      icon:"QSR.jpg"
+    },
+    {
+      icon:"Buffet.jpg"
+    },
+    {
+      icon:"FoodCourt.jpg"
+    },
+    {
+      icon:"PopUpRestaurants.jpg"
+    },
+    {
+      icon:"Bakery.jpg"
+    },
+  ]
   return (
     <div>
       {/* home banner */}
@@ -392,16 +448,25 @@ function Home_page() {
       </div>
 
       {/* All in one resturants */}
-      <div className=" w-full bg-[#fff0ad]">
-        <img
-          className=" object-cover object-center w-full h-full"
-          src="allrestaurants.jpg"
-          alt=""
-        />
+      <div className=" h-full py-20 flex flex-col items-center justify-center px-5 sm:px-10 md:px-20 lg:px-40 w-full bg-[#fff0ad]">
+        <div className=" mb-2 uppercase text-center font-semibold">
+          Outlet type
+        </div>
+        <div className=" mb-2 text-lg text-center font-semibold">
+          Built for all type of food business
+        </div>
+        <div className=" mb-14 text-base text-center">
+          The all-in-one Restaurant Management System for all types of restaurant formats and food outlets
+        </div>
+        <div className=" flex items-center justify-center flex-wrap">
+          {allInOneItems.map((item,index)=>(
+            <All_in_one_res_card key={index} icon={item.icon}/>
+          ))}
+        </div>
       </div>
       {/* free demo form */}
       <div className=" flex justify-center w-full bg-white py-14 px-6 ">
-        <div className=" flex flex-col-reverse justify-center items-center md:flex-row gap-16 w-[60rem] ">
+        <div className=" flex flex-col-reverse justify-center items-center md:flex-row gap-16 w-[80rem] ">
           <form className=" w-full">
             <div className=" mb-5">
               <h1 className="text-2xl mb-1 font-semibold sm:text-3xl md:text-4xl ">
@@ -458,9 +523,9 @@ function Home_page() {
               </button>
             </div>
           </form>
-          <div className=" w-[75%] sm:w-2/4">
+          <div className=" w-full sm:w-[90%]">
             <img
-              src="https://d28ewddc5mocr5.cloudfront.net/images/scheduale-form_md.webp "
+              src="./demoCall.jpg"
               className=" w-full h-full"
             />
           </div>
