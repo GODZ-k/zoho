@@ -60,23 +60,97 @@ function Home_page() {
                 </div>
               </button>
             </div>
-            {/* <div className=" w-full lg:w-[70%] -bottom-0 left-24 lg:absolute z-[-1]">
+            <div className=" w-full lg:w-[70%] -bottom-0 left-24 lg:absolute z-[-1]">
               <img
                 src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-homev2-banner-india-3.webp"
                 alt=""
               />
-            </div> */}
+            </div>
           </div>
         </div>
-        <div className="">
-          <img src="firstcreative.png" alt="" />
+        <div className=" w-full relative sm:w-[30rem] lg:w-96 bg-white rounded-md border px-8 py-5 border-gray-200">
+          <div className="">
+            <div className=" absolute uppercase -top-6 text-white bg-red-500 px-5 py-3 rounded-3xl font-semibold">
+              Why QRDine-IN?
+            </div>
+            <div className=" border-b border-b-gray-300">
+              <div>
+                {featuredApps.map((item) => (
+                  <HomeCard
+                    icon={item.icon}
+                    content={item.content}
+                    name={item.name}
+                    to={item.to}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className=" flex justify-between text-blue-400  pt-6">
+              <button className=" uppercase font-semibold text-blue-500">
+                {" "}
+                Exploree all products
+              </button>
+              <div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" lg:mb-0 py-16 lg:py-32 flex px-4 justify-evenly lg:flex-row flex-col items-center lg:items-start  w-full bg-yellow-400">
+        <div className=" flex gap-6 flex-col sm:flex-row w-full  lg:w-[40rem] border-b lg:border-r border-b-[#d0b31c] lg:border-b-0 pb-20 lg:pb-0 lg:border-r-[#d0b31c] border-dashed">
+          <div className=" w-40 sm:w-96">
+            <img src="https://qrdine.in/assets/img/logo.png" alt="" />
+          </div>
+          <div>
+            <div className="">
+              <div>All-in-one suite</div>
+              <div className=" text-4xl">QRDine-In</div>
+              <div>The operating system for business</div>
+            </div>
+            <div className=" w-full pb-9 py-6">
+              Run your entire business on Zoho with our unified cloud software,
+              designed to help you break down silos between departments and
+              increase organizational efficiency.
+            </div>
+            <div className=" bg-red-800 p-3 rounded-sm w-fit text-white">
+              <button className=" flex justify-between gap-6 uppercase">
+                <div>TRY QRDINE</div>
+                <div>
+                  {" "}
+                  <i className=" text-sm fa-solid fa-chevron-right"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className=" pt-16 lg:pt-0 w-full sm:w-80">
+          <div className=" bg-black w-fit text-white py-3 px-4 rounded-full">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+          <div className=" py-5 text-2xl font-thin">
+            "You can be a startup, mid-sized company, or an enterprise—Zoho One
+            is a boon for all."
+          </div>
+          <div className=" flex items-center gap-3">
+            <div className=" w-16 text-white flex justify-center items-center bg-black h-16 rounded-full">
+              {/* <img src="" alt="" /> */}
+              img
+            </div>
+            <div>
+              <div>Kajal Shrivastawa</div>
+              <div className=" text-gray-800 font-light">
+                CEO , kandatechnology.com
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* restaurant showcase banner */}
       <div className=" bg-[#f8f9fb] text-center">
         <div className=" py-16 sm:py-28 mx-4 sm:mx-24 md:mx-44 flex gap-4 flex-col items-center">
-          <div className=" relative uppercase font-light text-gray-800 text-sm inline-block">
+          <div className=" uppercase font-light text-gray-800 text-sm inline-block">
             Brand That trust us
             <div className=" border-b top-3 right-1/2 border-b-red-800 absolute"></div>
           </div>
@@ -150,31 +224,31 @@ function Home_page() {
       </div>
 
       {/* mehak  */}
-      <div className=" px-7 flex flex-col items-center justify-center h-72  ">
-        <div className=" pb-7 text-3xl font-semibold text-center">
+      <div className=" px-7 flex mb-8 flex-col items-center justify-center h-72  ">
+        <div className=" pb-7 text-3xl sm:text-3xl md:text-4xl font-semibold text-start sm:text-center">
           Improve efficiency and delight customers with our user-friendly
           interface.
         </div>
-        <div className=" text-gray-500 text-base text-center">
+        <div className=" bg-[#ffe988] text-start  text-gray-800 py-1 px-2 rounded-md text-base sm:text-lg sm:text-center">
           The All Restaurant Business Management Solution, We provide a complete
           solution for managing restaurants effectively.
         </div>
       </div>
 
       {/* e billing  */}
-      <div className=" px-14 flex gap-8 items-center justify-center w-full">
-        <div className=" w-[45%] flex ">
+      <div className=" px-10 md:px-14 flex gap-8 mb-5  flex-col-reverse items-center md:items-start md:flex-row justify-center w-full">
+        <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
-            src="e-billing.jpg"
+            src="e-billing.png"
             className=" w-full h-full object-center object-cover"
             alt=""
           />
         </div>
-        <div className=" w-[40%] flex flex-col gap-5">
-          <div className=" text-3xl font-semibold leading-10">
+        <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
+          <div className=" text-start sm:text-center md:text-start  text-3xl lg:text-4xl font-semibold lg:leading-10">
             Well organized Your Restaurant Business: Billing Software Made Easy
           </div>
-          <div className=" text-gray-700 text-lg leading-8">
+          <div className=" text-start sm:text-center md:text-start text-gray-700 >text-base lg:text-lg lg:leading-8">
             Easily manage orders, bills, and payments with us. Effortlessly
             split bills, merge tables, and apply discounts for
             cost-effectiveness and customer experience.
@@ -183,64 +257,90 @@ function Home_page() {
       </div>
 
       {/* inventory */}
-      <div className=" px-14 flex gap-8 items-center justify-center w-full">
-        <div className=" w-[45%] flex ">
+      <div className=" px-10 md:px-14 flex gap-8  mb-5   flex-col-reverse items-center md:items-start md:flex-row justify-center w-full">
+        <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
-            src="6.png"
+            src="inventory_management.png"
             className=" w-full h-full object-center object-cover"
             alt=""
           />
         </div>
-        <div className=" w-[40%] flex flex-col gap-5">
-          <div className=" text-3xl font-semibold leading-10">
-          Track Inventory and Reduce Wastage
+        <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
+          <div className=" text-start sm:text-center md:text-start  text-3xl lg:text-4xl font-semibold lg:leading-10">
+            Track Inventory and Reduce Wastage
           </div>
-          <div className=" text-gray-700 text-lg leading-8">
-          Maximize your business potential with our smart inventory management. Features like auto-deduction, low-stock alerts, and daily reports help reduce waste and improve profits.
+          <div className=" text-start sm:text-center md:text-start text-gray-700 >text-base lg:text-lg lg:leading-8">
+            Maximize your business potential with our smart inventory
+            management. Features like auto-deduction, low-stock alerts, and
+            daily reports help reduce waste and improve profits.
           </div>
         </div>
       </div>
       {/* Qr based ordering  */}
-      <div className=" px-14 flex gap-8 items-center justify-center w-full">
-        <div className=" w-[45%] flex ">
+      <div className=" px-10 md:px-14 flex gap-8  mb-5  flex-col-reverse items-center md:items-start md:flex-row justify-center w-full">
+        <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
-            src="7.png"
+            src="Qrdine_Qr.png"
             className=" w-full h-full object-center object-cover"
             alt=""
           />
         </div>
-        <div className=" w-[40%] flex flex-col gap-5">
-          <div className=" text-3xl font-semibold leading-10">
+        <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
+          <div className=" text-start sm:text-center md:text-start  text-3xl lg:text-4xl font-semibold lg:leading-10">
           Transforming Restaurants with QR-Based Ordering Systems
           </div>
-          <div className=" text-gray-700 text-lg leading-8">
-          Experience effortless management of orders, menus, and payments with our QR-based system. One screen streamlines operations, delights customers, and boosts your productivity.
-
-
+          <div className=" text-start sm:text-center md:text-start text-gray-700 >text-base lg:text-lg lg:leading-8">
+            Experience effortless management of orders, menus, and payments with
+            our QR-based system. One screen streamlines operations, delights
+            customers, and boosts your productivity.
           </div>
         </div>
       </div>
       {/* Sales report  */}
-      <div className=" px-14 flex gap-8 items-center justify-center w-full">
-        <div className=" w-[45%] flex ">
+       <div className=" px-10 md:px-14 flex gap-8  mb-5  flex-col-reverse items-center md:items-start md:flex-row justify-center w-full">
+        <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
-            src="9.png"
+            src="sales_report.png"
             className=" w-full h-full object-center object-cover"
             alt=""
           />
         </div>
-        <div className=" w-[40%] flex flex-col gap-5">
-          <div className=" text-3xl font-semibold leading-10">
-          Enhancing Business Performance with Real-time Insights and Detailed Reports
-
+        <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
+          <div className=" text-start sm:text-center md:text-start  text-3xl lg:text-4xl font-semibold lg:leading-10">
+          Enhancing Business Performance with Real-time Insights and Detailed
+          Reports
           </div>
-          <div className=" text-gray-700 text-lg leading-8">
-          Upgrade to real-time insights and detailed reports with our POS system. Trusted by clients for years, it gives your restaurant the edge in performance.
+          <div className=" text-start sm:text-center md:text-start text-gray-700 >text-base lg:text-lg lg:leading-8">
+          Upgrade to real-time insights and detailed reports with our POS
+            system. Trusted by clients for years, it gives your restaurant the
+            edge in performance.
           </div>
         </div>
       </div>
 
-      
+      {/* crm qrdine  */}
+
+      <div className=" bg-[#ffe988] flex justify-between  flex-col lg:flex-row px-5 sm:px-10 lg:px-20 xl:px-40 py-20 w-full items-center">
+        <div className=" w-full text-start lg:w-[40%]">
+          <div className=" text-3xl lg:text-4xl pb-10 font-semibold">
+            A rating shows{" "}
+            <span className=" bg-[#ffd727] px-2">Satisfaction,</span> but
+            loyalty defines your brand. Honesty is crucial for creating strong
+            relationships and impactful CRM.
+          </div>
+          <div className=" text-lg">
+            Boost your restaurant's performance with Our advance billing
+            software. Experience real-time insights and detailed reports that
+            drive smart decisions. Our POS system has delighted clients for
+            years, fostering long-term Customer Relationships Management and
+            business growth.
+          </div>
+        </div>
+        <div className=" w-full sm:w-[30rem] lg:w-[50%]">
+          <img src="crm.png" className=" h-full w-full" alt="" />
+        </div>
+      </div>
+
       {/*  */}
       {/* pivacy and policy  */}
       <div class=" flex flex-col justify-center  items-center gap-4 sm:gap-5 bg-[#e9e9e999]rounded-md p-10 sm:p-20 md:p-32 w-full ">
@@ -261,6 +361,10 @@ function Home_page() {
         </button>
       </div>
 
+{/* All in one resturants */}
+<div className=" w-full">
+  <img className=" object-cover object-center w-full h-full" src="allResturants.jpg" alt="" />
+</div>
       {/* free demo form */}
       <div className=" flex justify-center w-full bg-white py-14 px-6 ">
         <div className=" flex flex-col-reverse justify-center items-center md:flex-row gap-16 w-[60rem] ">

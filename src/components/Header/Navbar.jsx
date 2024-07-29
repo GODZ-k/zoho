@@ -200,7 +200,7 @@ function handleProductDropdown() {
     <div>
       {/* large screen view  */}
 
-      <nav  className="fixed bg-white w-full">
+      <nav  className="fixed z-10 bg-white w-full">
         <div className="border-b border-b-[#e7ebf0] p-4 flex justify-between items-center">
           <div className=" pl-0 sm:pl-10 gap-4 flex items-center">
             <div className="px-4 inline-block w-28">
