@@ -1,5 +1,5 @@
 import React from "react";
-import { All_in_one_res_card, HomeCard, Nav_Cards } from "../../components";
+import { All_in_one_res_card, HomeCard, Nav_Cards , Container, FreeDemo } from "../../components";
 
 function Home_page() {
   const featuredApps = [
@@ -105,9 +105,9 @@ function Home_page() {
   ]
 
   return (
-    <div>
-      {/* home banner */}
-      <div className=" px-6 sm:px-8 relative z-[-1] flex lg:flex-row gap-12 lg:gap-0 flex-col items-center lg:items-start justify-evenly flex-wrap pt-[30%] sm:pt-40 pb-20 bg-[#f8f9fb]">
+    <Container>
+      {/* home banner  pb-20 */}
+      <div className=" px-6 sm:px-8 relative z-[-1] flex lg:flex-row gap-12 lg:gap-0 flex-col items-center lg:items-start justify-evenly flex-wrap  bg-[#f8f9fb]">
         <div className=" w-full lg:text-start  lg:w-[35%] px-0 sm:px-2 xl:px-14">
           <div className="">
             <div className=" text-4xl text-black mb-8">
@@ -166,10 +166,11 @@ function Home_page() {
             </div> */}
           </div>
         </div>
-      </div>
+      </div>  
+
 
       {/* company showcase */}
-      <div className=" lg:mb-0 py-16 lg:py-32 flex px-6 sm:px-8 justify-evenly lg:flex-row flex-col items-center lg:items-start  w-full bg-yellow-400">
+      {/* <div className=" lg:mb-0 py-16 lg:py-32 flex px-6 sm:px-8 justify-evenly lg:flex-row flex-col items-center lg:items-start  w-full bg-yellow-400">
         <div className=" flex gap-6 flex-col sm:flex-row w-full  lg:w-[40rem] border-b lg:border-r border-b-[#d0b31c] lg:border-b-0 pb-20 lg:pb-0 lg:border-r-[#d0b31c] border-dashed">
           <div className=" w-40 sm:w-96">
             <img src="https://qrdine.in/assets/img/logo.png" alt="" />
@@ -206,7 +207,6 @@ function Home_page() {
           </div>
           <div className=" flex items-center gap-3">
             <div className=" w-16 text-white flex justify-center items-center bg-black h-16 rounded-full">
-              {/* <img src="" alt="" /> */}
               img
             </div>
             <div>
@@ -217,7 +217,7 @@ function Home_page() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* restaurant showcase banner */}
       <div className=" bg-[#f8f9fb] text-center">
@@ -296,7 +296,7 @@ function Home_page() {
       </div>
 
       {/* mehak  */}
-      <div className=" px-6 sm:px-8 md:px-10 flex flex-col items-center justify-center my-8 sm:my-0 h-60  ">
+      <div className=" px-6 sm:px-8 md:px-10 flex flex-col items-center justify-center my-8 sm:my-0 h-60 mt-20  ">
         <div className=" pb-7 text-3xl md:text-4xl font-semibold text-start sm:text-center">
           Improve efficiency and delight customers with our user-friendly
           interface.
@@ -439,7 +439,7 @@ function Home_page() {
 
       {/*  */}
       {/* pivacy and policy  */}
-      <div class=" flex flex-col justify-center  items-center gap-4 sm:gap-5 bg-[#e9e9e999]rounded-md p-10 sm:p-20 md:p-32 w-full ">
+      {/* <div class=" flex flex-col justify-center  items-center gap-4 sm:gap-5 bg-[#e9e9e999]rounded-md p-10 sm:p-20 md:p-32 w-full ">
         <i class="fa-solid fa-shield-halved  text-7xl "></i>
         <h1 class=" text-2xl font-semibold sm:text-3xl md:text-4xl text-center">
           Your privacy is our responsibility
@@ -455,10 +455,10 @@ function Home_page() {
           <i class="fa-brands fa-square-youtube text-red-700 pr-5 pt-1 "> </i>
           <div className=" text-sm md:text-lg">Watch Video</div>
         </button>
-      </div>
+      </div> */}
 
       {/* All in one resturants */}
-      <div className=" h-full py-20 flex flex-col items-center justify-center px-5 sm:px-10 md:px-20 lg:px-40 w-full bg-[#fff0ad]">
+      <div className=" h-full py-20 flex flex-col items-center justify-center px-6 sm:px-8 md:px-10 lg:px-40 w-full bg-[#fff0ad]">
         <div className=" mb-2 uppercase text-center font-semibold">
           Outlet type
         </div>
@@ -474,74 +474,10 @@ function Home_page() {
           ))}
         </div>
       </div>
+
       {/* free demo form */}
-      <div className=" flex justify-center w-full bg-white py-14 px-6 ">
-        <div className=" flex flex-col-reverse justify-center items-center md:flex-row gap-16 w-[80rem] ">
-          <form className=" w-full">
-            <div className=" mb-5">
-              <h1 className="text-2xl mb-1 font-semibold sm:text-3xl md:text-4xl ">
-                Schedule a free demo
-              </h1>
-              <p className=" text-[15px] sm:text-[17px] text-gray-700 ">
-                Get in touch with our team to clarify your queries
-              </p>
-            </div>
-            <div className="">
-              <h4 className=" text-[15px] ml-1">Name</h4>
-              <input
-                type="text"
-                className="bg-[#f5f8fa] rounded-xl border border-[#e3e3e3] p-1.5 w-full "
-              />
-            </div>
-
-            <div className=" flex sm:flex-row flex-col justify-between items-center gap-3 mt-4">
-              <div className="inline-block w-full sm:w-1/2">
-                <h4 className=" text-[15px]  ml-1">Phone Number</h4>
-                <input
-                  type="number"
-                  className="bg-[#f5f8fa] rounded-xl border border-[#e3e3e3] p-1.5 w-full "
-                />
-              </div>
-
-              <div className="inline-block w-full sm:w-1/2">
-                <h4 className=" text-[15px]  ml-1">Email</h4>
-                <input
-                  type="email"
-                  className="bg-[#f5f8fa] rounded-xl border border-[#e3e3e3] p-1.5 w-full "
-                />
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <h4 className=" text-[15px]  ml-1">City</h4>
-              <input
-                type="text"
-                className="bg-[#f5f8fa] rounded-xl border border-[#e3e3e3] p-1.5 w-full "
-              />
-            </div>
-            <div className="mt-4">
-              <h4 className=" text-[15px]  ml-1">Restaurant Name</h4>
-              <input
-                type="text"
-                className="bg-[#f5f8fa] rounded-xl border border-[#e3e3e3] p-1.5 w-full "
-              />
-            </div>
-
-            <div className=" flex justify-end items-center w-full mt-4">
-              <button className="  border bg-red-700 rounded-lg text-whitem px-4 py-3 font-semibold text-white">
-                Submit
-              </button>
-            </div>
-          </form>
-          <div className=" w-full sm:w-[90%]">
-            <img
-              src="./demoCall.jpg"
-              className=" w-full h-full"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+      <FreeDemo/>
+    </Container>
   );
 }
 
