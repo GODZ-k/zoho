@@ -252,6 +252,7 @@ function Navbar() {
       <nav className="fixed z-10 bg-white w-full">
         <div className="border-b border-b-[#e7ebf0] p-4 flex justify-between items-center">
           <div className=" pl-0 sm:pl-10 gap-4 flex items-center">
+            <Link to="/">
             <div className="px-4 inline-block w-28">
               <img
                 className="w-full h-full"
@@ -259,6 +260,7 @@ function Navbar() {
                 alt="Logo"
               />
             </div>
+            </Link>
             <div className="hidden lg:inline-block">
               <ul className="font-light gap-8 flex">
                 <li
