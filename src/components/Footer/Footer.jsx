@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 function Footer() {
+  const [isExpand , setIsExpand] = useState(false)
   return (
     <div class="flex flex-col items-center py-14 justify-center w-full px-6 mb-[2rem] lg:mb-0">
       <div class="flex items-center flex-col gap-8 md:gap-24 w-full">
         <div class="w-full md:w-fit">
           <div className=" flex gap-10 sm:gap-20 md:gap-28 flex-wrap justify-start lg:justify-center w-full">
             <div class="flex flex-col items-start gap-2">
-              <h1 class="font-semibold text-lg pb-3">POS</h1>
+              <h1 class="font-semibold text-lg">POS</h1>
               <ul class="flex justify-center text-gray-700 flex-col gap-4">
-                <li>
+                <li className=" pt-3">
                   <Link>Billing</Link>
                 </li>
                 <li>
@@ -33,32 +34,35 @@ function Footer() {
               </button>
             </div>
             <div class="flex flex-col items-start gap-2">
-              <h1 class="font-semibold text-lg pb-3">Add-ons</h1>
+              <h1 class="font-semibold text-lg">Features</h1>
               <ul class="flex justify-center text-gray-700 flex-col gap-4">
-                <li>
-                  <Link>Marketplace</Link>
+                <li className=" pt-3">
+                  <Link>Paperless Billing</Link>
                 </li>
                 <li>
-                  <Link>Payroll</Link>
+                  <Link>QR based Ordering</Link>
                 </li>
                 <li>
-                  <Link>Invoice</Link>
+                  <Link>Detailing Reports</Link>
                 </li>
                 <li>
-                  <Link>Tasks</Link>
+                  <Link>CRM Automation</Link>
                 </li>
                 <li>
-                  <Link>Marketing Hub</Link>
+                  <Link>Digital Menu</Link>
                 </li>
                 <li>
-                  <Link>Integrations</Link>
+                  <Link>Inventory Tracking & Waste Control</Link>
+                </li>
+                <li>
+                  <Link>Staff, Kitchen and Admin Applications</Link>
                 </li>
               </ul>
             </div>
             <div class="flex flex-col items-start gap-2">
-              <h1 class="font-semibold text-lg pb-3">Outlet types</h1>
-              <ul class="flex justify-center text-gray-700 flex-col gap-4 h-96 overflow-scroll">
-                <li>
+              <h1 class="font-semibold text-lg">Outlet types</h1>
+              <ul class={`${isExpand ? 'h-fit' : ' h-[37vh] overflow-hidden'} transform transition-all delay-1000 flex justify-center text-gray-700 flex-col gap-4`}>
+                <li className="pt-3">
                   <Link to="/fine-dine">Fine Dine</Link>
                 </li>
                 <li>
@@ -113,11 +117,14 @@ function Footer() {
                   <Link to="/bakery">Bakery</Link>
                 </li>
               </ul>
+              <button className=" mt-2 rounded-md" onClick={()=>{
+                setIsExpand(!isExpand)
+              }}>{isExpand ? <div className=" flex gap-2 items-center">Show less<i class="fa-solid fa-caret-up"></i></div> : <div className=" flex gap-2 items-center">Show more<i class="fa-solid fa-caret-down"></i></div>}</button>
             </div>
             <div class="flex flex-col items-start gap-3">
-              <h1 class="font-semibold text-lg pb-3">Social Steps</h1>
+              <h1 class="font-semibold text-lg">Social Steps</h1>
               <ul class="flex justify-center text-gray-700 flex-col gap-4">
-                <li>
+                <li className=" pt-3">
                   <Link>Pricing</Link>
                 </li>
                 <li>
@@ -140,8 +147,8 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div class="flex flex-col items-start gap-3 w-60">
-              <h1 class="font-semibold text-lg">
+            <div  className="flex flex-col items-start gap-3 w-60">
+              <h1 className="font-semibold text-lg">
                 K & A Technology Pvt Ltd.
               </h1>
               <div className=" text-gray-700">

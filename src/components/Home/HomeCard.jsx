@@ -6,7 +6,7 @@ function HomeCard({ icon, content, name, to }) {
     <Link to={to} className=" items-center justify-start my-8 flex gap-5 w-full">
     <div>
     <div className=" w-16 h-16 pt-1 text-2xl flex justify-center items-center  text-blue-400">
-        <img className=" w-full h-full" src={`/featured_section/${icon}`}alt="" />
+        <img className=" w-full h-full" src={icon}alt="" />
       </div>
     </div>
       <div>

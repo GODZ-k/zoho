@@ -1,108 +1,114 @@
 import React from "react";
-import { All_in_one_res_card, HomeCard, Nav_Cards , Container, FreeDemo } from "../../components";
+import {
+  All_in_one_res_card,
+  HomeCard,
+  Nav_Cards,
+  Container,
+  FreeDemo,
+} from "../../components";
 
 function Home_page() {
   const featuredApps = [
     {
       name: "Paperless Billing",
-      to: "/",
+      slug: "paperless-billibg",
       content: "",
-      icon: "Billing4.png",
+      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417339/Billling_3_1_kdg5rj.png",
     },
     {
-      name: "QR based Ordering",
-      to: "/",
+      name: "QR Based Ordering ",
+      slug: "qr-ordering",
       content: "",
-      icon: "Billing3.png",
+      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417348/QR_Odering_1_1_lgwroo.png",
     },
     {
       name: "Detailing Reports",
-      to: "/",
+      slug: "detail-reports",
       content: "",
-      icon: "POS2.png",
+      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417346/POS_2_1_w7irvb.png",
     },
     {
       name: "CRM Automation",
-      to: "/",
-      content: "",
-      icon: "CRM2.png",
+      slug: "crm-automation",
+      content:"",
+      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417341/CRM_2_1_m6z06k.png",
     },
     {
       name: "Digital Menu",
-      to: "/",
+      slug: "digital-menu",
       content: "",
-      icon: "digitalMenu.png",
+      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417349/QR_Odering_qfjtak.png",
     },
     {
-      name: "Inventory Tracking & Waste Control",
-      to: "/",
-      content: "",
-      icon: "Inventory1.png",
+      name: "Inventory Tracking and Waste Control",
+      slug: "inventory-tacking-waste-control",
+      content:"",
+      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417343/Inventory_1_1_tjmu4r.png",
     },
     {
-      name: "Staff, Kitchen and Admin Applications",
-      to: "/",
+      name: "Staff Kitchen and Admin Application",
+      slug: "admin-app",
       content: "",
-      icon: "skaapp.png",
+      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417338/22_pxslxr.png",
     },
   ];
 
-  const allInOneItems =[
+  const allInOneItems = [
     {
-      icon:"FineDine.jpg"
+      icon: "FineDine.jpg",
     },
     {
-      icon:"CasualDining.jpg"
+      icon: "CasualDining.jpg",
     },
     {
-      icon:"Bar&Brewery.jpg"
+      icon: "Bar&Brewery.jpg",
     },
     {
-      icon:"Cafe.jpg"
+      icon: "Cafe.jpg",
     },
     {
-      icon:"Pizzeria.jpg"
+      icon: "Pizzeria.jpg",
     },
     {
-      icon:"FastCasual.jpg"
+      icon: "FastCasual.jpg",
     },
     {
-      icon:"CloudKitchens.jpg"
+      icon: "CloudKitchens.jpg",
     },
     {
-      icon:"FoodTruck.jpg"
+      icon: "FoodTruck.jpg",
     },
     {
-      icon:"FastFood.jpg"
+      icon: "FastFood.jpg",
     },
     {
-      icon:"Bistros.jpg"
+      icon: "Bistros.jpg",
     },
     {
-      icon:"Brasseries.jpg"
+      icon: "Brasseries.jpg",
     },
     {
-      icon:"LargeFoodChains.jpg"
+      icon: "LargeFoodChains.jpg",
     },
     {
-      icon:"Ice-Creams&Desserts.jpg"
+      icon: "Ice-Creams&Desserts.jpg",
     },
     {
-      icon:"QSR.jpg"
+      icon: "QSR.jpg",
     },
     {
-      icon:"Buffet.jpg"
+      icon: "Buffet.jpg",
     },
     {
-      icon:"FoodCourt.jpg"
+      icon: "FoodCourt.jpg",
     },
     {
-      icon:"PopUpRestaurants.jpg"
+      icon: "PopUpRestaurants.jpg",
     },
     {
-      icon:"Bakery.jpg"
+      icon: "Bakery.jpg",
     },
-  ]
+  ];
 
   return (
     <>
@@ -130,11 +136,8 @@ function Home_page() {
                 </div>
               </button>
             </div>
-            <div className=" lg:pb-10 w-full lg:w-[70%] -bottom-0 left-24 lg:absolute z-[-1]">
-              <img
-                src="fontImage.png"
-                alt=""
-              />
+            <div className=" lg:pb-0 w-full lg:w-[70%] -bottom-0 left-24 lg:absolute z-[-1]">
+              <img src="fontImage.png" alt="" />
             </div>
           </div>
         </div>
@@ -145,12 +148,12 @@ function Home_page() {
             </div>
             <div>
               <div>
-                {featuredApps.map((item) => (
+                {featuredApps?.map((item) => (
                   <HomeCard
                     icon={item.icon}
                     content={item.content}
                     name={item.name}
-                    to={item.to}
+                    to={item.slug}
                   />
                 ))}
               </div>
@@ -166,8 +169,7 @@ function Home_page() {
             </div> */}
           </div>
         </div>
-      </div>  
-
+      </div>
 
       {/* company showcase */}
       {/* <div className=" lg:mb-0 py-16 lg:py-32 flex px-6 sm:px-8 justify-evenly lg:flex-row flex-col items-center lg:items-start  w-full bg-yellow-400">
@@ -302,8 +304,7 @@ function Home_page() {
           interface.
         </div>
         <div className=" bg-[#ffe988] text-start text-gray-800 py-1 px-2 md:px-20 rounded-md text-base lg:text-lg sm:text-center">
-        The All Restaurant Business Management Solution,
-        We provide a complete
+          The All Restaurant Business Management Solution, We provide a complete
           solution for managing restaurants effectively.
         </div>
       </div>
@@ -340,10 +341,10 @@ function Home_page() {
         </div>
         <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
           <div className=" text-start sm:text-center md:text-start text-3xl font-semibold lg:leading-10">
-          Track Inventory and Reduce Wastage
+            Track Inventory and Reduce Wastage
           </div>
           <div className=" text-start sm:text-center md:text-start text-gray-700 text-base lg:text-lg lg:leading-8">
-          Maximize your business potential with our smart inventory
+            Maximize your business potential with our smart inventory
             management. Features like auto-deduction, low-stock alerts, and
             daily reports help reduce waste and improve profits.
           </div>
@@ -362,10 +363,10 @@ function Home_page() {
         </div>
         <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
           <div className=" text-start sm:text-center md:text-start text-3xl font-semibold lg:leading-10">
-          Transforming Restaurants with QR-Based Ordering Systems
+            Transforming Restaurants with QR-Based Ordering Systems
           </div>
           <div className=" text-start sm:text-center md:text-start text-gray-700 text-base lg:text-lg lg:leading-8">
-          Experience effortless management of orders, menus, and payments with
+            Experience effortless management of orders, menus, and payments with
             our QR-based system. One screen streamlines operations, delights
             customers, and boosts your productivity.
           </div>
@@ -373,7 +374,6 @@ function Home_page() {
       </div>
 
       {/* Sales report  */}
-
 
       <div className=" px-6 sm:px-8 md:px-10 flex gap-8 flex-col-reverse items-center md:items-start md:flex-row justify-center w-full">
         <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
@@ -385,22 +385,22 @@ function Home_page() {
         </div>
         <div className=" w-full md:w-[40%] pt-5 md:pt-12 lg:pt-40 flex flex-col gap-5">
           <div className=" text-start sm:text-center md:text-start text-3xl font-semibold lg:leading-10">
-          Enhancing Business Performance with Real-time Insights and Detailed
-          Reports          </div>
+            Enhancing Business Performance with Real-time Insights and Detailed
+            Reports{" "}
+          </div>
           <div className=" text-start sm:text-center md:text-start text-gray-700 text-base lg:text-lg lg:leading-8">
-          Upgrade to real-time insights and detailed reports with our POS
+            Upgrade to real-time insights and detailed reports with our POS
             system. Trusted by clients for years, it gives your restaurant the
             edge in performance.
           </div>
         </div>
       </div>
-      
 
       {/* crm qrdine  */}
       <div className=" bg-[#ffe988] flex justify-between  flex-col lg:flex-row px-6 sm:px-8 lg:px-10 xl:px-40 py-20 w-full">
         <div className=" w-full text-start lg:w-[40%]">
           <div className=" uppercase text-3xl mb-8 px-4 py-2 rounded-full bg-black text-white inline-block">
-            CRM 
+            CRM
           </div>
           <div className=" text-3xl lg:text-4xl pb-10 font-semibold !leading-snug">
             A rating shows{" "}
@@ -425,15 +425,23 @@ function Home_page() {
 
       <div className=" px-6 sm:px-8 lg:px-10 xl:px-40 flex md:flex-row flex-col gap-5 pt-20 md:pt-10 justify-between">
         <div className=" md:mt-28 w-full md:w-[40rem]">
-          <div className=" text-4xl xl:text-5xl text-[#ffd000] font-semibold mb-3">One Dashboard,</div>
-          <div className=" text-2xl xl:text-3xl font-semibold mb-3">multiple integrations made easy.</div>
+          <div className=" text-4xl xl:text-5xl text-[#ffd000] font-semibold mb-3">
+            One Dashboard,
+          </div>
+          <div className=" text-2xl xl:text-3xl font-semibold mb-3">
+            multiple integrations made easy.
+          </div>
           <div className=" text-gray-900 text-lg leading-6">
             Manage all restaurant services from a single screen, anyway you
             choose—mobile phone, tablet, laptop, or desktop.
           </div>
         </div>
         <div className=" w-full md:w-[40rem]">
-          <img src="oneScreenIntr.png" className=" h-full w-full object-cover object-center" alt="" />
+          <img
+            src="oneScreenIntr.png"
+            className=" h-full w-full object-cover object-center"
+            alt=""
+          />
         </div>
       </div>
 
@@ -466,17 +474,18 @@ function Home_page() {
           Built for all type of food business
         </div>
         <div className=" mb-14 text-base text-center">
-          The all-in-one Restaurant Management System for all types of restaurant formats and food outlets
+          The all-in-one Restaurant Management System for all types of
+          restaurant formats and food outlets
         </div>
         <div className=" flex items-center justify-center flex-wrap">
-          {allInOneItems.map((item,index)=>(
-            <All_in_one_res_card key={index} icon={item.icon}/>
+          {allInOneItems.map((item, index) => (
+            <All_in_one_res_card key={index} icon={item.icon} />
           ))}
         </div>
       </div>
 
       {/* free demo form */}
-      <FreeDemo/>
+      <FreeDemo />
     </>
   );
 }

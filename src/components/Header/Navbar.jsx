@@ -115,31 +115,37 @@ function Navbar() {
       subItem: [
         {
           name: "Paperless Billing",
-          slug: "",
+          slug: "paperless-billibg",
           icon:"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417339/Billling_3_1_kdg5rj.png"
         },
         {
           name: "QR Based Ordering ",
+          slug:'qr-ordering',
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417348/QR_Odering_1_1_lgwroo.png",
         },
         {
           name: "Detailing Reports",
+          slug:"detail-reports",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417346/POS_2_1_w7irvb.png",
         },
         {
           name: "CRM Automation",
+          slug:"crm-automation",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417341/CRM_2_1_m6z06k.png",
         },
         {
           name: "Digital Menu",
+          slug:'digital-menu',
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417349/QR_Odering_qfjtak.png",
         },
         {
           name: "Inventory Tracking and Waste Control",
+          slug:"inventory-tacking-waste-control",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417343/Inventory_1_1_tjmu4r.png",
         },
         {
           name: "Staff Kitchen and Admin Application",
+          slug:"admin-app",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417338/22_pxslxr.png",
         },
       ],
@@ -318,7 +324,7 @@ function Navbar() {
           <div className=" p-5">
             <ul className=" flex flex-wrap gap-6  bg-[#fffefa] ">
               {subNavData[0].subItem.map((item) => (
-                <NavLink to={item.slug}>
+                <NavLink to={item.slug} className={({isActive})=> `${isActive ? 'bg-gray-100' : 'bg-transparent'} rounded-xl`}>
                 <li  key={item.name}
                     className=" w-64 p-2  hover:bg-gray-100 rounded-xl"
                   >
@@ -352,7 +358,7 @@ function Navbar() {
           <div>
             <ul className=" flex gap-8 flex-wrap py-3 bg-[#fffefa]">
               {subNavData[2].subItem.map((item) => (
-                <NavLink to={item.slug}>
+               <NavLink to={item.slug} className={({isActive})=> `${isActive ? 'bg-gray-100' : 'bg-transparent'} rounded-xl`}>
                   <li
                     key={item.name}
                     className="p-2 w-64  hover:bg-gray-100 rounded-xl"
