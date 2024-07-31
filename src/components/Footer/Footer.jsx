@@ -61,7 +61,7 @@ function Footer() {
             </div>
             <div class="flex flex-col items-start gap-2">
               <h1 class="font-semibold text-lg">Outlet types</h1>
-              <ul class={`${isExpand ? 'h-fit' : ' h-[37vh] overflow-hidden'} transform transition-all delay-1000 flex justify-center text-gray-700 flex-col gap-4`}>
+              <ul class={`${isExpand ? 'h-fit' : ' h-[19rem] overflow-hidden'} transform transition-all delay-1000 flex justify-center text-gray-700 flex-col gap-4`}>
                 <li className="pt-3">
                   <Link to="/fine-dine">Fine Dine</Link>
                 </li>
