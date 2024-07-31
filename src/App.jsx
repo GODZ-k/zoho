@@ -12,6 +12,14 @@ import Bistro_page from "./pages/Home/Bistro_page";
 import Brasserie_page from "./pages/Home/Brasserie_page";
 import FoodTruck_page from "./pages/Home/FoodTruck_page";
 import PopUpRestaurant_page from "./pages/Home/PopUpRestaurant_page";
+import QSR_page from "./pages/Home/QSR_page";
+import FoodCourt_page from "./pages/Home/FoodCourt_page";
+import CloudKitchen_page from "./pages/Home/CloudKitchen-page";
+import YummyTreat_page from "./pages/Home/YummyTreat_page";
+import Bakery_page from "./pages/Home/Bakery_page";
+import BarBrewery_page from "./pages/Home/Bar&Brewery_page";
+import Pizzeria_page from "./pages/Home/Pizzeria_page";
+import FoodChain_page from "./pages/Home/FoodChain_page";
 
 
 function App() {
@@ -29,7 +37,15 @@ function App() {
         <Route path="/brasseries" element={<Brasserie_page/>}/>
         <Route path="/food-truck" element={<FoodTruck_page/>}/>
         <Route path="/popup-restaurant" element={<PopUpRestaurant_page/>}/>
-        <Route path="/qsr" element={<PopUpRestaurant_page/>}/>
+        <Route path="/qsr" element={<QSR_page/>}/>
+        <Route path="/food-court" element={<FoodCourt_page/>}/>
+        <Route path="/cloud-kitchen" element={<CloudKitchen_page/>}/>
+        <Route path="/icecream&dessert" element={<YummyTreat_page/>}/>
+        <Route path="/bakery" element={<Bakery_page/>}/>
+        <Route path="/bar&brewery" element={<BarBrewery_page/>}/>
+        <Route path="/pizzeria" element={<Pizzeria_page/>}/>
+        <Route path="/food-chain" element={<FoodChain_page/>}/>
+
       </Route>
     </Routes>
   );

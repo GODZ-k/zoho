@@ -59,7 +59,7 @@ function OutletCard({
       )}
       {contentList &&
         contentList.map((list) => (
-          <div className={`${list.direction === 1 && 'md:flex-row-reverse' } md:flex-row flex my-32 flex-col gap-10 justify-between items-center`}>
+          <div className={`${list.direction === 1 && 'md:flex-row-reverse' } md:flex-row flex my-20 md:my-32 flex-col gap-10 justify-between items-center`}>
             <div className=" px-6 sm:px-8 md:px-10 lg:px-20 xl:px-28 flex flex-col gap-5 w-full lg:w-[50rem]">
              {
                 list?.headOne && (

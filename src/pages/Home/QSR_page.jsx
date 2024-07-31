@@ -3,28 +3,28 @@ import { Container, OutletCard } from '../../components';
 
 const contentList = [
     {
-        headOne:"Create a Successful Roadmap for Pop-Up Restaurant",
+        headOne:"QSR Marketing Strategies for Success",
         headTwo:"",
-        image:"./popupRestaurant/popupRestaurantsBanner.png",
+        image:"",
         transform:0,
         direction:0,
-        content:"Planning a pop-up restaurant involves key steps. Start by defining your unique concept and researching your market. Choose a strategic location and design a focused menu. Source quality ingredients and hire skilled staff. Promote your pop-up through social media and local channels. Set up operations efficiently and gather customer feedback. Evaluate your performance to refine future pop-ups. Following these steps will help ensure success."
+        content:"Effective QSR marketing focuses on attracting and keeping customers. Use social media to connect with your audience and showcase new offers. Offer loyalty programs to encourage repeat business. Local promotions and partnerships can drive foot traffic. Keep the menu exciting with limited-time specials to draw in new customers. Consistent branding and high-quality service help build a strong reputation and keep customers coming back."
     },
     {
-        headOne:"Unlock Sales Potential Through Smart Item Categorization",
+        headOne:"The Simplest QSR Restaurant Inventory Management Software",
         headTwo:"",
-        image:"./popupRestaurant/popupRestaurantsBanner.png",
+        image:"",
         transform:1,
         direction:1,
-        content:"To maximize sales by understanding item categories, start by analyzing which categories bring the most revenue. Group items into clear categories like appetizers, mains, and desserts. Track which categories are popular and adjust your offerings based on customer preferences. Promote high-margin categories and offer specials to boost sales. Regularly review sales data to refine your menu and strategies, ensuring you meet customer needs and increase profitability."
+        content:"Manage restaurant inventory with ease using simple software designed for QSR. Track stock levels, reorder supplies, and reduce waste effortlessly. The user-friendly interface ensures quick updates and accurate records. Get real-time insights into inventory needs and make informed decisions without the hassle. Streamline inventory tasks to focus on delivering great service and food. QRDine-In Restaurant software makes inventory management straightforward and efficient."
     },
     {
-        headOne:"Generate Invoices and bills Instantly with QRDine-In Restaurant Software",
+        headOne:"POS Point of Sale Software",
         headTwo:"",
-        image:"./popupRestaurant/popupRestaurantsBanner.png",
+        image:"",
         transform:0,
         direction:0,
-        content:"QRDine-In Restaurant Software makes creating invoices and bills quick and easy. Generate accurate, professional invoices with just a few clicks, saving time and reducing errors. This software helps streamline the billing process, ensuring fast and efficient transactions. Ideal for busy restaurants, it simplifies financial management and improves overall efficiency, so you can focus on providing great service to your customers."
+        content:"Quick service POS system is a modern and advanced food service management software that helps you to manage your all business operations including customers, orders, sales, accounts, employees, kitchen, suppliers, production, and so on with a single automation system."
     }
 ]
 
@@ -33,10 +33,10 @@ function QSR_page() {
   return (
     <Container>
         <OutletCard 
-        head="pop-up restaurant"
-        headOne={"Explore New Tastes at the Latest Pop-Up Restaurants"}
-        headContent={"Enjoy fresh, exciting meals at the latest pop-up restaurant. Experience new flavors and special dishes in a unique setting. It’s a great way to taste something different for a limited time."}
-        frontImage={"./popupRestaurant/popupRestaurant.png"}
+        head="QSR"
+        headOne={"Enjoy Quick and Smooth Dining at QSR"}
+        headContent={"QSR provides fast service in a casual setting with simple seating and a focused menu. Ideal for quick, tasty meals when you're short on time and looking for convenience."}
+        frontImage={""}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />
