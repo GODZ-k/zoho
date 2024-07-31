@@ -36,7 +36,7 @@ function Bakery_page() {
         head="Bakery"
         headOne={"Enjoy Fresh Bread and Sweet Treats from the Bakery"}
         headContent={"A bakery always offers fresh bread, cakes, pastries, and cookies are baked and sold. It’s the perfect spot to pick up delicious treats and enjoy homemade flavors."}
-        frontImage={""}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416080/Bakery_j9sf6h.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

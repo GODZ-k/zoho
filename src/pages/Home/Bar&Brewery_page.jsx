@@ -36,7 +36,7 @@ function BarBrewery_page() {
         head="Bar & Brewery"
         headOne={"Enjoy Fresh, chill Beers and Drinks at the Bar & Brewery"}
         headContent={"A bar and brewery serves a variety of drinks and often brews its own beer. It’s a great place to enjoy fresh beverages and relax with friends in a welcoming atmosphere."}
-        frontImage={""}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416079/Bar_and_Brewery_pcqvf1.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

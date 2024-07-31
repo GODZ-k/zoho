@@ -37,7 +37,7 @@ function FastCasual_page() {
         headOne={"Traditional Taste"}
         headTwo={"Embrace the Innovation Fast Casual the timeless table"}
         headContent={"Fast Casual is your go-to spot for quick, delicious meals. Enjoy a relaxed setting with friendly service. Perfect for a tasty bite on the go or a casual hangout."}
-        frontImage={"./fastCasual/fastCasual.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416085/Fast_Casual_b7u3l7.png"}
         contentList={contentList}
         />
     </Container>

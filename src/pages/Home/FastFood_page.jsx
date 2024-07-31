@@ -36,7 +36,7 @@ function Fastfood_page() {
         head="Fast Food"
         headOne={"Experience the Joy of Tasty Fast Food Delights!"}
         headContent={"Fast Food serves up quick and tasty meals for when you're on the move. Enjoy hot burgers, fries, and more, all served fast with a smile. Perfect for busy days!"}
-        frontImage={"./fastFood/fastFood.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416086/Fast_Food_qifxq4.png"}
         mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

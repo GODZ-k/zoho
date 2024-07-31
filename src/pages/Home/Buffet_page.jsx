@@ -36,7 +36,7 @@ function Buffet_page() {
         head="Buffet"
         headOne={"Unlimited Delights: Discover the Perfect Buffet Solution"}
         headContent={"A Buffet offers a variety of dishes! Enjoy unlimited servings of a variety of tasty dishes for one simple cost. Eat as much as you like and enjoy a full and satisfying meal!"}
-        frontImage={"./buffet/buffet.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416081/Buffet_l1gnaq.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

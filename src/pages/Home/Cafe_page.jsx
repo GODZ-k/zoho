@@ -41,7 +41,7 @@ function Cafe_page() {
         headContent={
           "Cafés are cozy spots serving coffee, tea, pastries, and light meals. Enjoy a relaxed atmosphere perfect for chatting with friends or taking a break from your day."
         }
-        frontImage={"./cafe/Cafe.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416081/Cafe_j5uvnr.png"}
         mainHead={"Elevate your service—delight your customers!"}
         contentList={contentList}
       />

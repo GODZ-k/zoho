@@ -57,36 +57,60 @@ function Footer() {
             </div>
             <div class="flex flex-col items-start gap-2">
               <h1 class="font-semibold text-lg pb-3">Outlet types</h1>
-              <ul class="flex justify-center text-gray-700 flex-col gap-4">
+              <ul class="flex justify-center text-gray-700 flex-col gap-4 h-96 overflow-scroll">
                 <li>
-                  <Link>Fine Dine</Link>
+                  <Link to="/fine-dine">Fine Dine</Link>
                 </li>
                 <li>
-                  <Link>QSR</Link>
+                  <Link to="/casual-dining">Casual Dining</Link>
                 </li>
                 <li>
-                  <Link>Cafe</Link>
+                  <Link to="/bar&brewery">Bar & Brewery</Link>
                 </li>
                 <li>
-                  <Link>Food Court</Link>
+                  <Link to="/cafe">Cafe</Link>
                 </li>
                 <li>
-                  <Link>Cloud Kitchen</Link>
+                  <Link to="/pizzeria">Pizzeria</Link>
                 </li>
                 <li>
-                  <Link>Ice Cream</Link>
+                  <Link to="/fast-casual">Fast Casual</Link>
                 </li>
                 <li>
-                  <Link>Bakery</Link>
+                  <Link to="/cloud-kitchen">Cloud Kitchens</Link>
                 </li>
                 <li>
-                  <Link>Bar & Brewery</Link>
+                  <Link to="/food-truck">Food Truck</Link>
                 </li>
                 <li>
-                  <Link>Pizzeria</Link>
+                  <Link to="/fast-food">Fast Food</Link>
                 </li>
                 <li>
-                  <Link>Large Chains</Link>
+                  <Link to="/bistros">Bistros</Link>
+                </li>
+                <li>
+                  <Link to="/brasseries">Brasseries</Link>
+                </li>
+                <li>
+                  <Link to="/food-chain">Large Food Chains</Link>
+                </li>
+                <li>
+                  <Link to="/icecream&dessert">Ice-Creams & Desserts</Link>
+                </li>
+                <li>
+                  <Link to="/qsr">QSR</Link>
+                </li>
+                <li>
+                  <Link to="/buffet">Buffet</Link>
+                </li>
+                <li>
+                  <Link to="/food-court">Food Court</Link>
+                </li>
+                <li>
+                  <Link to="/popup-restaurant">Pop Up Restaurants</Link>
+                </li>
+                <li>
+                  <Link to="/bakery">Bakery</Link>
                 </li>
               </ul>
             </div>

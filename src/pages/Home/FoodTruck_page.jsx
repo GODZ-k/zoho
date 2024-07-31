@@ -36,7 +36,7 @@ function FoodTruck_page() {
         head="Food Trucks"
         headOne={"Explore Delicious Dishes with Food Trucks"}
         headContent={"Food Trucks bring delicious meals right to you. Enjoy a variety of tasty dishes served quickly from a convenient spot. Perfect for grabbing a bite on the go and trying new flavors."}
-        frontImage={"./foodTruck/foodTruck.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416090/food_Truck_vivsyg.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

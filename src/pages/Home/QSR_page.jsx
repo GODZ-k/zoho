@@ -36,7 +36,7 @@ function QSR_page() {
         head="QSR"
         headOne={"Enjoy Quick and Smooth Dining at QSR"}
         headContent={"QSR provides fast service in a casual setting with simple seating and a focused menu. Ideal for quick, tasty meals when you're short on time and looking for convenience."}
-        frontImage={""}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416096/Quick_Service_Restaurant_epwbsy.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

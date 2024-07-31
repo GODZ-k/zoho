@@ -39,7 +39,7 @@ function YummyTreat_page() {
         headOne={"Yummy Treats, Joyful Smiles"}
         headTwo={"Ice Cream & Dessert"}
         headContent={"Enjoy a range of delicious treats including ice cream, gelato, frozen yogurt, pastries, and cakes. Ideal for satisfying sweet cravings with a variety of delightful options available anytime."}
-        frontImage={""}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416092/Ice_Cream_mlwrho.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

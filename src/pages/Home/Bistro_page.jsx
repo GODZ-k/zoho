@@ -37,7 +37,7 @@ function Bistro_page() {
         headOne={"Affordable Comfort"}
         headTwo={"Top Quality Bistros with a Taste to Remember"}
         headContent={"Bistros are casual restaurants serving simple, hearty meals at fair prices. Enjoy a cozy atmosphere and classic dishes inspired by French dining culture, perfect for a relaxed meal any time."}
-        frontImage={"./bistro/bistro.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416080/Bistros_zi1gxi.png"}
         // mainHead={"Experience top-notch service with QRDine-In restaurant POS system "}
         contentList={contentList}
         />

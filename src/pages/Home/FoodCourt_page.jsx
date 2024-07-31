@@ -37,7 +37,7 @@ function FoodCourt_page() {
         head="Food Court"
         headOne={"The Food Court: Great Eats in One Place"}
         headContent={"A Food Court is a shared dining area where you can pick from different food options. It’s usually located in malls, airports, or parks, offering a range of quick meals."}
-        frontImage={""}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416088/Food_Court_ocqfhm.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

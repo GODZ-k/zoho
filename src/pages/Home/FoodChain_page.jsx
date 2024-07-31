@@ -36,7 +36,7 @@ function FoodChain_page() {
         head="Food Chain"
         headOne={"Enjoy Tasty Meals at Your Favorite Food Chain"}
         headContent={"A large food chain has many locations under one brand, often as franchises. Each outlet offers a consistent menu, making it easy to enjoy your favorite meals anywhere."}
-        frontImage={""}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416093/Large_Food_chain_vkowni.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

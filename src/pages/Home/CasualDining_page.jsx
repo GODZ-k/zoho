@@ -37,7 +37,7 @@ function CasualDining_page() {
         headOne={"Delicious and Casual"}
         headTwo={"Dining Like Never Before"}
         headContent={"Casual Dining is the place for tasty food, relaxed vibes, and good times. Come in, eat well, and enjoy!"}
-        frontImage={"./casualDining/casualDining.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416082/Casual_Dining_mgyemc.png"}
         mainHead={"Gain customers with QRDine-In POS Systems. Simplify operations with restaurant software"}
         contentList={contentList}
         />

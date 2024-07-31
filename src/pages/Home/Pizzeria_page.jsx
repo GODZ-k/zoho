@@ -36,7 +36,7 @@ function Pizzeria_page() {
         head="Pizzeria"
         headOne={"Delivering Delight in Every Bite! Pizzeria"}
         headContent={"At the pizzeria, enjoy fresh, hot pizzas with a variety of toppings. Perfect for a delicious meal any time. Each pizza is made with care and served with a smile."}
-        frontImage={""}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416093/Pizzera_kod2vc.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

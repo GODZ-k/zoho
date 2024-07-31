@@ -37,7 +37,7 @@ function Brasserie_page() {
         headOne={"Chill Out and Dine at a Classic Brasserie"}
         // headTwo={"Top Quality Bistros with a Taste to Remember"}
         headContent={"A brasserie is an informal French cafe offering beer and wine with simple, hearty food. The dining area is usually large and open, boasting a loud, boisterous atmosphere with many tables filling the space."}
-        frontImage={"./brasseries/brasseries.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416080/Brasseries_tpr768.png"}
         // mainHead={"Experience top-notch service with QRDine-In restaurant POS system "}
         contentList={contentList}
         />

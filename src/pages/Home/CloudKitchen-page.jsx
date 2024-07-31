@@ -39,7 +39,7 @@ function CloudKitchen_page() {
         headOne={"Cloud Kitchens"}
         headTwo={"Easy and Appetizing Meal Choices"}
         headContent={"A cloud kitchen is a specialized kitchen set up to prepare meals exclusively for delivery. It doesn’t offer a dine-in option, ensuring you get hot, fresh food delivered right to your door."}
-        frontImage={""}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416084/Cloud_Kitchen_yntvmn.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

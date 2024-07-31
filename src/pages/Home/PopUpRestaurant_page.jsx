@@ -36,7 +36,7 @@ function PopUpRestaurant_page() {
         head="pop-up restaurant"
         headOne={"Explore New Tastes at the Latest Pop-Up Restaurants"}
         headContent={"Enjoy fresh, exciting meals at the latest pop-up restaurant. Experience new flavors and special dishes in a unique setting. It’s a great way to taste something different for a limited time."}
-        frontImage={"./popupRestaurant/popupRestaurant.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416095/popUp-Resturant_qsovpi.png"}
         // mainHead={"All-in-one billing solution in just one click"}
         contentList={contentList}
         />

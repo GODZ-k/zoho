@@ -215,23 +215,6 @@ function Navbar() {
     };
   }, []);
 
-  // close navar when click anywhere on the screen -----
-
-  // useEffect(() => {
-  //   function handleClickOutside(event) {
-  //     if (ref.current && !ref.current.contains(event.target)) {
-  //       setCompany(false);
-  //       setProduct(false);
-  //       setSocialStep(false);
-  //     }
-  //   }
-
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [ref]);
-
   // for mobile devices ----
   useEffect(() => {
     function handleClickOutside(event) {
@@ -250,10 +233,10 @@ function Navbar() {
   }, [mobilenavbarRef]);
 
   return (
-    <div>
+    <div onMouseLeave={closeDropdowns} >
       {/* large screen view  */}
 
-      <nav onMouseLeave={closeDropdowns} className="fixed z-10 bg-white w-full">
+      <nav className="fixed z-10 bg-white w-full">
         <div className="border-b border-b-[#e7ebf0] p-4 flex justify-between items-center">
           <div className=" pl-0 sm:pl-10 gap-4 flex items-center">
             <Link to="/">

@@ -36,7 +36,7 @@ function FineDine_page() {
         headOne={"Make Better"}
         headTwo={"Your Fine Dine-In Experience"}
         headContent={"Fine Dine is where tasty food, a comfy vibe, and friendly faces come together. Come, eat, laugh, and have a blast!"}
-        frontImage={"./fineDine/FineDine.png"}
+        frontImage={"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722416087/Fine_Dine_xdfkki.png"}
         mainHead={"Experience top-notch service with QRDine-In restaurant POS system "}
         contentList={contentList}
         />
