@@ -29,6 +29,7 @@ function App() {
         <Route path="/brasseries" element={<Brasserie_page/>}/>
         <Route path="/food-truck" element={<FoodTruck_page/>}/>
         <Route path="/popup-restaurant" element={<PopUpRestaurant_page/>}/>
+        <Route path="/qsr" element={<PopUpRestaurant_page/>}/>
       </Route>
     </Routes>
   );

@@ -20,13 +20,13 @@ function OutletCard({
           </div>
           <div className=" flex flex-col gap-3">
             {headOne && (
-              <div className=" text-5xl lg:text-7xl font-bold text-gray-900">
+              <div className=" text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
                 {/* Make Better */}
                 {headOne}
               </div>
             )}
             {headTwo && (
-              <div className=" text-4xl lg:text-5xl font-semibold">
+              <div className=" text-3xl lg:text-4xl font-semibold">
                 {/* Your Fine Dine-In Experience */}
                 {headTwo}
               </div>
