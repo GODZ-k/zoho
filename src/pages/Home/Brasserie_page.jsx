@@ -33,7 +33,7 @@ function Brasserie_page() {
   return (
     <Container>
         <OutletCard 
-        head="brasserie"
+        head="brasseries"
         headOne={"Chill Out and Dine at a Classic Brasserie"}
         // headTwo={"Top Quality Bistros with a Taste to Remember"}
         headContent={"A brasserie is an informal French cafe offering beer and wine with simple, hearty food. The dining area is usually large and open, boasting a loud, boisterous atmosphere with many tables filling the space."}

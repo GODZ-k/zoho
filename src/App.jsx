@@ -39,7 +39,7 @@ function App() {
         <Route path="/popup-restaurant" element={<PopUpRestaurant_page/>}/>
         <Route path="/qsr" element={<QSR_page/>}/>
         <Route path="/food-court" element={<FoodCourt_page/>}/>
-        <Route path="/cloud-kitchen" element={<CloudKitchen_page/>}/>
+        <Route path="/cloud-kitchens" element={<CloudKitchen_page/>}/>
         <Route path="/icecream&dessert" element={<YummyTreat_page/>}/>
         <Route path="/bakery" element={<Bakery_page/>}/>
         <Route path="/bar&brewery" element={<BarBrewery_page/>}/>

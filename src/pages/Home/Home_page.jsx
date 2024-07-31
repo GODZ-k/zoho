@@ -105,9 +105,9 @@ function Home_page() {
   ]
 
   return (
-    <Container>
+    <>
       {/* home banner  pb-20 */}
-      <div className=" px-6 sm:px-8 relative z-[-1] flex lg:flex-row gap-12 lg:gap-0 flex-col items-center lg:items-start justify-evenly flex-wrap  bg-[#f8f9fb]">
+      <div className=" pt-28 px-6 sm:px-8 relative z-[-1] flex lg:flex-row gap-12 lg:gap-0 flex-col items-center lg:items-start justify-evenly flex-wrap  bg-[#f8f9fb]">
         <div className=" w-full lg:text-start  lg:w-[35%] px-0 sm:px-2 xl:px-14">
           <div className="">
             <div className=" text-4xl text-black mb-8">
@@ -477,7 +477,7 @@ function Home_page() {
 
       {/* free demo form */}
       <FreeDemo/>
-    </Container>
+    </>
   );
 }
 

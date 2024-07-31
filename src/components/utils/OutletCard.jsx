@@ -92,7 +92,7 @@ function OutletCard({
                 )
              }
             </div>
-            <div className={` ${list?.transform === 1 ? '-scale-x-100' : ""} transform  w-full h-full flex justify-center items-center sm:w-[50rem] md:w-[40rem]`}>
+            <div className={` ${list?.transform === 1 ? '-scale-x-100' : ""} overflow-hidden transform  w-full h-full flex justify-center items-center sm:w-[50rem] md:w-[40rem]`}>
               <img
                 src={list?.image}
                 className=" w-full h-full object-center"
