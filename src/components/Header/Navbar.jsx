@@ -355,7 +355,7 @@ function Navbar() {
           className={`transition-all duration-150 ${
             company
               ? "translate-y-0 visible"
-              : "opacity-0 h-0 invisible translate-y-4"
+              : "opacity-0 invisible translate-y-4"
           } absolute left-[19rem] top-[4.6rem] w-2/5  rounded-xl px-6 py-2 bg-[#fffefa] border border-x-gray-300 border-r-gray-300 border-l-gray-300`}
         >
           <div>
