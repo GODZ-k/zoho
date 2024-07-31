@@ -7,9 +7,6 @@ function Navbar() {
   const [product, setProduct] = useState(false);
   const [company, setCompany] = useState(false);
   const [socialstep, setSocialStep] = useState(false);
-  const [AppComp, setAppComp] = useState(true);
-  //   const [SuitesCompData, setSuitesComp] = useState(false);
-  //   const [activeSubNav, setActiveSubNav] = useState("Apps");
   const [navbar, setNavbar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdown, setDropdown] = useState("");
@@ -170,7 +167,14 @@ function Navbar() {
 
  
   function handlecompanyDropdown() {
-    setCompany(!company);
+    setCompany(true);
+    setProduct(false);
+    setSocialStep(false);
+  }
+
+
+  function closeDropdowns() {
+    setCompany(false);
     setProduct(false);
     setSocialStep(false);
   }
@@ -182,7 +186,7 @@ function Navbar() {
   }
 
   function handleProductDropdown() {
-    setProduct(!product);
+    setProduct(true);
     setCompany(false);
     setSocialStep(false);
   }
@@ -213,20 +217,20 @@ function Navbar() {
 
   // close navar when click anywhere on the screen -----
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        setCompany(false);
-        setProduct(false);
-        setSocialStep(false);
-      }
-    }
+  // useEffect(() => {
+  //   function handleClickOutside(event) {
+  //     if (ref.current && !ref.current.contains(event.target)) {
+  //       setCompany(false);
+  //       setProduct(false);
+  //       setSocialStep(false);
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [ref]);
 
   // for mobile devices ----
   useEffect(() => {
@@ -264,7 +268,9 @@ function Navbar() {
             <div className="hidden lg:inline-block">
               <ul className="font-light gap-8 flex">
                 <li
-                  onClick={handleProductDropdown}
+                  onMouseEnter={handleProductDropdown}
+                  // onMouseEnter={handlecompanyDropdown}
+                  
                   className="cursor-pointer flex gap-2 items-center"
                 >
                   <div>Outlet type</div>
@@ -318,6 +324,7 @@ function Navbar() {
           </div>
         </div>
         <div
+        onMouseLeave={closeDropdowns}
           ref={ref}
           className={`transition-all duration-150 ${
             product
@@ -355,7 +362,7 @@ function Navbar() {
           className={`transition-all duration-150 ${
             company
               ? "translate-y-0 visible"
-              : "opacity-0 invisible translate-y-4"
+              : "opacity-0 h-0 invisible translate-y-4"
           } absolute left-[19rem] top-[4.6rem] w-2/5  rounded-xl px-6 py-2 bg-[#fffefa] border border-x-gray-300 border-r-gray-300 border-l-gray-300`}
         >
           <div>
