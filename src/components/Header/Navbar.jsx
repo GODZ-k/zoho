@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import AppsComp from "./AppsComp";
-import SuitesComp from "./SuitesComp";
 
 function Navbar() {
   const [product, setProduct] = useState(false);
@@ -172,25 +170,27 @@ function Navbar() {
     setSocialStep(false);
   }
 
-
-  function closeDropdowns() {
+  
+  function handleProductDropdown() {
+    setProduct(!product);
     setCompany(false);
-    setProduct(false);
     setSocialStep(false);
   }
 
   function handleSocialStepDropdown() {
     setCompany(false);
     setProduct(false);
-    setSocialStep(!socialstep);
+    setSocialStep(true);
   }
+  
 
-  function handleProductDropdown() {
-    setProduct(true);
-    setCompany(false);
-    setSocialStep(false);
-  }
-
+    function closeDropdowns() {
+      setCompany(false);
+      setProduct(false);
+      setSocialStep(false);
+    }
+  
+ 
   function handleNavbar() {
     setNavbar(!navbar);
   }
@@ -253,7 +253,7 @@ function Navbar() {
     <div>
       {/* large screen view  */}
 
-      <nav className="fixed z-10 bg-white w-full">
+      <nav onMouseLeave={closeDropdowns} className="fixed z-10 bg-white w-full">
         <div className="border-b border-b-[#e7ebf0] p-4 flex justify-between items-center">
           <div className=" pl-0 sm:pl-10 gap-4 flex items-center">
             <Link to="/">
@@ -268,9 +268,9 @@ function Navbar() {
             <div className="hidden lg:inline-block">
               <ul className="font-light gap-8 flex">
                 <li
-                  onMouseEnter={handleProductDropdown}
-                  // onMouseEnter={handlecompanyDropdown}
+                  onMouseEnter={handleProductDropdown}  
                   
+
                   className="cursor-pointer flex gap-2 items-center"
                 >
                   <div>Outlet type</div>
@@ -281,7 +281,7 @@ function Navbar() {
                   ></i>
                 </li>
                 <li
-                  onClick={handlecompanyDropdown}
+                  onMouseEnter={handlecompanyDropdown}
                   className="flex gap-2 items-center cursor-pointer"
                 >
                   <div>Features</div>
@@ -299,7 +299,7 @@ function Navbar() {
             <div className=" pl-0 pr-3 sm:pl-10 gap-4 flex items-center">
               <ul className="font-light gap-8 flex">
                 <li
-                  onClick={handleSocialStepDropdown}
+                  onMouseOver={handleSocialStepDropdown}
                   className="flex gap-2 items-center cursor-pointer"
                 >
                   <div>Social Steps</div>
@@ -358,6 +358,7 @@ function Navbar() {
           </div>
         </div>
         <div
+         onMouseLeave={closeDropdowns}
           ref={ref}
           className={`transition-all duration-150 ${
             company
@@ -388,6 +389,7 @@ function Navbar() {
           </div>
         </div>
         <div
+         onMouseLeave={closeDropdowns}
           ref={ref}
           className={`transition-all duration-150 ${
             socialstep ? "translate-y-0" : "opacity-0 translate-y-4"
