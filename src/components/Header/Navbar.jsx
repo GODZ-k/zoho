@@ -22,7 +22,7 @@ function Navbar() {
       subItem: [
         {
           name: "Fine Dine",
-          slug: "/fine-dine",
+          slug: "fine-dine",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417843/Fine_Dine_w3bip3.png",
         },
         {
@@ -92,7 +92,7 @@ function Navbar() {
         },
         {
           name: "Buffet",
-          slug: "buffer",
+          slug: "buffet",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417832/Buffet_zehy9a.png",
         },
         {
