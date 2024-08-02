@@ -150,23 +150,23 @@ function Navbar() {
       subItem: [
         {
           name: "Instagram",
-          link: "https://www.instagram.com/qrdine.in/",
+          slug: "https://www.instagram.com/qrdine.in/",
         },
         {
           name: "Facebook",
-          link: "https://www.facebook.com/qrdinein",
+          slug: "https://www.facebook.com/qrdinein",
         },
         {
           name: "X",
-          link: "https://x.com/Qrdinein",
+          slug: "https://x.com/Qrdinein",
         },
         {
           name: "You Tube",
-          link: "https://www.youtube.com/@QRDine-In",
+          slug: "https://www.youtube.com/@QRDine-In",
         },
         {
           name: "Linked-in",
-          link: "https://www.linkedin.com/company/qrdine-in/",
+          slug: "https://www.linkedin.com/company/qrdine-in/",
         },
       ],
     },
@@ -403,7 +403,7 @@ function Navbar() {
             <ul className="">
               {subNavData[3].subItem.map((item) => (
                 <li key={item.name} className="pb-3">
-                 <a href={item.link}>{item.name}</a>
+                 <a href={item.slug}>{item.name}</a>
                 </li>
               ))}
             </ul>
