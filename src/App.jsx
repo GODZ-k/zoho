@@ -26,6 +26,7 @@ import Trackinventory_page from "./pages/Home/feature pages/TrackInventory_page.
 import DetailingReport_page from "./pages/Home/feature pages/DetailingReport_page.jsx";
 import CRM_page from "./pages/Home/feature pages/Crm_page.jsx";
 import EBilling_page from "./pages/Home/feature pages/EBilling_page.jsx";
+import Pos_page from "./pages/Home/feature pages/Pos_page.jsx";
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         <Route path="/track-inventory" element={<Trackinventory_page/>}/>
         <Route path="/detailing-report" element={<DetailingReport_page/>}/>
         <Route path="/crm" element={<CRM_page/>}/>
+        <Route path="/pos" element={<Pos_page/>}/>
 
       </Route>
     </Routes>

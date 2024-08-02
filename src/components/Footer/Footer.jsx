@@ -180,19 +180,19 @@ function Footer() {
               meets innovation with the Paperless solutions!</p>
             </div>
             <div class="flex gap-5 text-2xl">
-              <a href="">
+              <a href="https://www.instagram.com/qrdine.in/">
                 {" "}
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <a href="">
+              <a href="https://www.linkedin.com/company/qrdine-in/">
                 {" "}
                 <i class="fa-brands fa-linkedin"></i>
               </a>
-              <a href="">
+              <a href="https://www.facebook.com/qrdinein">
                 {" "}
                 <i class="fa-brands fa-facebook"></i>
               </a>{" "}
-              <a href="">
+              <a href="https://www.youtube.com/@QRDine-In">
                 <i class="fa-brands fa-youtube"></i>
               </a>
             </div>
