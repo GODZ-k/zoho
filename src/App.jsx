@@ -1,32 +1,39 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
-import Home_page from "./pages/Home/Home_page";
-import FineDine_page from "./pages/Home/FineDine_page";
-import CasualDining_page from "./pages/Home/CasualDining_page";
-import FastCasual_page from "./pages/Home/FastCasual_page";
-import Fastfood_page from "./pages/Home/FastFood_page";
-import Cafe_page from "./pages/Home/Cafe_page";
-import Buffet_page from "./pages/Home/Buffet_page";
-import Bistro_page from "./pages/Home/Bistro_page";
-import Brasserie_page from "./pages/Home/Brasserie_page";
-import FoodTruck_page from "./pages/Home/FoodTruck_page";
-import PopUpRestaurant_page from "./pages/Home/PopUpRestaurant_page";
-import QSR_page from "./pages/Home/QSR_page";
-import FoodCourt_page from "./pages/Home/FoodCourt_page";
-import CloudKitchen_page from "./pages/Home/CloudKitchen-page";
-import YummyTreat_page from "./pages/Home/YummyTreat_page";
-import Bakery_page from "./pages/Home/Bakery_page";
-import BarBrewery_page from "./pages/Home/Bar&Brewery_page";
-import Pizzeria_page from "./pages/Home/Pizzeria_page";
-import FoodChain_page from "./pages/Home/FoodChain_page";
+// import Home_page from "./pages/Home/Home_page";
+const Home_page  = lazy(()=> import('./pages/Home/Home_page'))
+import FineDine_page from "./pages/Home/outlet pages/FineDine_page";
+import CasualDining_page from "./pages/Home/outlet pages/CasualDining_page";
+import FastCasual_page from "./pages/Home/outlet pages/FastCasual_page";
+import Fastfood_page from "./pages/Home/outlet pages/FastFood_page";
+import Cafe_page from "./pages/Home/outlet pages/Cafe_page";
+import Buffet_page from "./pages/Home/outlet pages/Buffet_page";
+import Bistro_page from "./pages/Home/outlet pages/Bistro_page";
+import Brasserie_page from "./pages/Home/outlet pages/Brasserie_page";
+import FoodTruck_page from "./pages/Home/outlet pages/FoodTruck_page";
+import PopUpRestaurant_page from "./pages/Home/outlet pages/PopUpRestaurant_page";
+import QSR_page from "./pages/Home/outlet pages/QSR_page";
+import FoodCourt_page from "./pages/Home/outlet pages/FoodCourt_page";
+import CloudKitchen_page from "./pages/Home/outlet pages/CloudKitchen-page";
+import YummyTreat_page from "./pages/Home/outlet pages/YummyTreat_page";
+import Bakery_page from "./pages/Home/outlet pages/Bakery_page";
+import BarBrewery_page from "./pages/Home/outlet pages/Bar&Brewery_page";
+import Pizzeria_page from "./pages/Home/outlet pages/Pizzeria_page";
+import FoodChain_page from "./pages/Home/outlet pages/FoodChain_page";
+import QR_ordering_page from "./pages/Home/feature pages/OR_ordering_page.jsx";
+import Trackinventory_page from "./pages/Home/feature pages/TrackInventory_page.jsx";
+import DetailingReport_page from "./pages/Home/feature pages/DetailingReport_page.jsx";
+import CRM_page from "./pages/Home/feature pages/Crm_page.jsx";
+import EBilling_page from "./pages/Home/feature pages/EBilling_page.jsx";
 
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home_page />} />
+        <Route index element={<Suspense fallback={<div>Loading ....</div>}><Home_page/></Suspense>} />
+        {/* Outlet pages  */}
         <Route path="/fine-dine" element={<FineDine_page/>}/>
         <Route path="/casual-dining" element={<CasualDining_page/>}/>
         <Route path="/fast-casual" element={<FastCasual_page/>}/>
@@ -45,6 +52,12 @@ function App() {
         <Route path="/bar&brewery" element={<BarBrewery_page/>}/>
         <Route path="/pizzeria" element={<Pizzeria_page/>}/>
         <Route path="/food-chain" element={<FoodChain_page/>}/>
+        {/* features pages  */}
+        <Route path="/e-billing" element={<EBilling_page/>}/>
+        <Route path="/qr-ordering" element={<QR_ordering_page/>}/>
+        <Route path="/track-inventory" element={<Trackinventory_page/>}/>
+        <Route path="/detailing-report" element={<DetailingReport_page/>}/>
+        <Route path="/crm" element={<CRM_page/>}/>
 
       </Route>
     </Routes>

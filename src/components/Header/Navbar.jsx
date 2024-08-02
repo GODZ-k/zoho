@@ -114,38 +114,33 @@ function Navbar() {
       name: "Features",
       subItem: [
         {
-          name: "Paperless Billing",
-          slug: "paperless-billibg",
+          name: "E-Billing",
+          slug: "e-billing",
           icon:"https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417339/Billling_3_1_kdg5rj.png"
         },
         {
-          name: "QR Based Ordering ",
-          slug:'qr-ordering',
+          name: "POS ",
+          slug:'pos',
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417348/QR_Odering_1_1_lgwroo.png",
         },
         {
           name: "Detailing Reports",
-          slug:"detail-reports",
+          slug:"detailing-report",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417346/POS_2_1_w7irvb.png",
         },
         {
           name: "CRM Automation",
-          slug:"crm-automation",
+          slug:"crm",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417341/CRM_2_1_m6z06k.png",
         },
         {
-          name: "Digital Menu",
-          slug:'digital-menu',
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417349/QR_Odering_qfjtak.png",
-        },
-        {
           name: "Inventory Tracking and Waste Control",
-          slug:"inventory-tacking-waste-control",
+          slug:"track-inventory",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417343/Inventory_1_1_tjmu4r.png",
         },
         {
-          name: "Staff Kitchen and Admin Application",
-          slug:"admin-app",
+          name: "QR-Ordering",
+          slug:"qr-ordering",
           icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417338/22_pxslxr.png",
         },
       ],
@@ -314,6 +309,7 @@ function Navbar() {
         </div>
         <div
         onMouseLeave={closeDropdowns}
+        onClick={closeDropdowns} 
           ref={ref}
           className={`transition-all duration-150 ${
             product
@@ -341,13 +337,14 @@ function Navbar() {
                       <div>{item.name}</div>
                     </div>
                   </li>
-                    </NavLink>
+                </NavLink>
               ))}
             </ul>
           </div>
         </div>
         <div
          onMouseLeave={closeDropdowns}
+         onClick={closeDropdowns} 
           ref={ref}
           className={`transition-all duration-150 ${
             company
@@ -379,6 +376,7 @@ function Navbar() {
         </div>
         <div
          onMouseLeave={closeDropdowns}
+                  onClick={closeDropdowns} 
           ref={ref}
           className={`transition-all duration-150 ${
             socialstep ? "translate-y-0" : "opacity-0 translate-y-4"

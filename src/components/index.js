@@ -7,6 +7,7 @@ import All_in_one_res_card from "./Home/All_in_one_res_card"
 import Container from "./utils/Container"
 import FreeDemo from "./Home/FreeDemo"
 import OutletCard from "./utils/OutletCard"
+import Feature_card from "./utils/FeatureCard"
 export {
     Navbar,
     Nav_Cards,
@@ -16,5 +17,6 @@ export {
     All_in_one_res_card,
     Container,
     FreeDemo,
-    OutletCard
+    OutletCard,
+    Feature_card
 }

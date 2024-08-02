@@ -10,46 +10,34 @@ import {
 function Home_page() {
   const featuredApps = [
     {
-      name: "Paperless Billing",
+      name: "POS",
       slug: "paperless-billibg",
       content: "",
       icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417339/Billling_3_1_kdg5rj.png",
     },
     {
-      name: "QR Based Ordering ",
+      name: "Inventory",
       slug: "qr-ordering",
       content: "",
       icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417348/QR_Odering_1_1_lgwroo.png",
     },
     {
-      name: "Detailing Reports",
-      slug: "detail-reports",
+      name: "Billing",
+      slug: "billing",
       content: "",
-      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417346/POS_2_1_w7irvb.png",
+      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417339/Billling_3_1_kdg5rj.png",
     },
     {
-      name: "CRM Automation",
-      slug: "crm-automation",
+      name: "CRM",
+      slug: "crm",
       content:"",
       icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417341/CRM_2_1_m6z06k.png",
     },
     {
-      name: "Digital Menu",
+      name: "Application",
       slug: "digital-menu",
       content: "",
       icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417349/QR_Odering_qfjtak.png",
-    },
-    {
-      name: "Inventory Tracking and Waste Control",
-      slug: "inventory-tacking-waste-control",
-      content:"",
-      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417343/Inventory_1_1_tjmu4r.png",
-    },
-    {
-      name: "Staff Kitchen and Admin Application",
-      slug: "admin-app",
-      content: "",
-      icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417338/22_pxslxr.png",
     },
   ];
 
