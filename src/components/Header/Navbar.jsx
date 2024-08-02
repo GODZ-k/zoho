@@ -403,7 +403,7 @@ function Navbar() {
             <ul className="">
               {subNavData[3].subItem.map((item) => (
                 <li key={item.name} className="pb-3">
-                  {item.name}
+                 <a href={item.link}>{item.name}</a>
                 </li>
               ))}
             </ul>
