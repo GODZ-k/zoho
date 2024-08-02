@@ -36,25 +36,22 @@ function Footer() {
             <h1 class="font-semibold text-lg">Features</h1>
             <ul class="flex justify-center text-gray-700 flex-col gap-4">
               <li className=" pt-3">
-                <Link>Paperless Billing</Link>
+                <Link to={"e-billing"}>E-Billing</Link>
               </li>
               <li>
-                <Link>QR based Ordering</Link>
+                <Link to={"qr-ordering"}>QR based Ordering</Link>
               </li>
               <li>
-                <Link>Detailing Reports</Link>
+                <Link to={"pos"}>POS</Link>
               </li>
               <li>
-                <Link>CRM Automation</Link>
+                <Link to={"detailing-report"}>Detailing Reports</Link>
               </li>
               <li>
-                <Link>Digital Menu</Link>
+                <Link to={"crm"}>CRM Automation</Link>
               </li>
-              <li>
+              <li to={"track-inventory"}>
                 <Link>Inventory Tracking & Waste Control</Link>
-              </li>
-              <li>
-                <Link>Staff, Kitchen and Admin Applications</Link>
               </li>
             </ul>
           </div>
