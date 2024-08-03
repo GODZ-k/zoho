@@ -256,6 +256,7 @@ function Navbar() {
             <Link to="/">
               <div className="px-4 inline-block w-28">
                 <img
+                loading="lazy"
                   className="w-full h-full"
                   src="https://qrdine.in/assets/img/logo.png"
                   alt="Logo"
@@ -345,6 +346,7 @@ function Navbar() {
                       <div>
                         <div className=" w-16 h-16 text-white flex justify-center items-center">
                           <img
+                          loading="lazy"
                             src={`Fine_Dine_2/${item.icon}`}
                             className=" h-full w-full object-center object-cover flex justify-center items-center"
                             alt=""
@@ -386,6 +388,7 @@ function Navbar() {
                       <div>
                         <div className=" h-16 w-16 flex justify-center items-center">
                           <img
+                          loading="lazy"
                             src={item.icon}
                             className=" h-full w-full  object-center"
                             alt=""
@@ -411,9 +414,11 @@ function Navbar() {
           <div>
             <ul className="">
               {subNavData[3].subItem.map((item) => (
+                <NavLink to={item.slug} className={({ isActive }) => `${isActive ? "bg-gray-100" : "bg-transparent"} rounded-xl`}>
                 <li key={item.name} className="pb-3 px-4 pt-2 hover:bg-gray-100 rounded-xl flex justify-start items-center">
-                 <a href={item.slug}>{item.name}</a>
+                 <div>{item.name}</div>
                 </li>
+                </NavLink>
               ))}
             </ul>
           </div>

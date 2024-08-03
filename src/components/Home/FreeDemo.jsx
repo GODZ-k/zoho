@@ -62,6 +62,7 @@ function FreeDemo() {
       </form>
       <div className=" w-full sm:w-[90%]">
         <img
+        loading="lazy"
           src="./demoCall.jpg"
           className=" w-full h-full"
         />

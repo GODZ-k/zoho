@@ -154,7 +154,7 @@ function Footer() {
         <div className=" inline-block">
           <div className=" flex flex-col items-start gap-4 w-60">
             <div class="w-44 flex justify-center items-center">
-              <img src="logo.png" alt="" />
+              <img loading="lazy" src="logo.png" alt="" />
             </div>
             <div className="">
               <p className=" text-gray-600 text-sm">
@@ -222,8 +222,7 @@ function Footer() {
         </div>
       </div>
       <div className=" text-gray-500 text-sm mt-6">
-        <span className=" uppercase">COPYRIGHT</span> © 2024 - K & A Technology
-        Pvt. Ltd., India • <Link to="">Privacy</Link> • <Link to="">Terms</Link>{" "}
+        <span className=" uppercase">COPYRIGHT</span> © 2024 - K and A Technology Pvt. Ltd., India • <Link to="">Privacy</Link> • <Link to="">Terms</Link>{" "}
         • <Link to="">Cancellation & Refund</Link> •
         <Link to="">Corporate Information</Link>
       </div>

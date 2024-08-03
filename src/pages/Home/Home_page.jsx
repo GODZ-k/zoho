@@ -120,12 +120,12 @@ function Home_page() {
                 <div className=" text-[18px]">Book A Free Demo</div>
                 {/* <i className=" absolute right-0 -bottom-5 text-4xl text-black fa-solid fa-arrow-pointer"></i> */}
                 <div className=" absolute -right-2 -bottom-2 w-8 h-8">
-                  <img className=" w-full h-full " src="icon.png" alt="" />
+                  <img loading="lazy" className=" w-full h-full " src="icon.png" alt="" />
                 </div>
               </button>
             </div>
             <div className=" lg:pb-0 w-full lg:w-[70%] -bottom-0 left-24 lg:absolute z-[-1]">
-              <img src="fontImage.png" alt="" />
+              <img loading="lazy" src="fontImage.png" alt="" />
             </div>
           </div>
         </div>
@@ -302,6 +302,7 @@ function Home_page() {
         <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
             src="e-billing.png"
+            loading="lazy"
             className=" w-full h-full object-center object-cover"
             alt=""
           />
@@ -322,6 +323,7 @@ function Home_page() {
       <div className=" px-6 sm:px-8 md:px-10 flex gap-8 flex-col-reverse items-center md:items-start md:flex-row justify-center w-full">
         <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
+          loading="lazy"
             src="inventory_management.png"
             className=" w-full h-full object-center object-cover"
             alt=""
@@ -345,6 +347,7 @@ function Home_page() {
         <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
             src="Qrdine_Qr.png"
+            loading="lazy"
             className=" w-full h-full object-center object-cover"
             alt=""
           />
@@ -367,6 +370,7 @@ function Home_page() {
         <div className=" w-full md:w-[25rem] lg:w-[35rem] flex ">
           <img
             src="sales_report.png"
+            loading="lazy"
             className=" w-full h-full object-center object-cover"
             alt=""
           />
@@ -405,7 +409,7 @@ function Home_page() {
           </div>
         </div>
         <div className=" w-full sm:w-[30rem] lg:w-[50%]">
-          <img src="crm.png" className=" h-full w-full" alt="" />
+          <img src="crm.png" loading="lazy" className=" h-full w-full" alt="" />
         </div>
       </div>
 
@@ -426,6 +430,7 @@ function Home_page() {
         </div>
         <div className=" w-full md:w-[40rem]">
           <img
+          loading="lazy"
             src="oneScreenIntr.png"
             className=" h-full w-full object-cover object-center"
             alt=""

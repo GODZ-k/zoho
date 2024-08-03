@@ -6,6 +6,7 @@ function About_page() {
     <div className=" pt-16">
       <div className=" relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] ">
         <img
+        loading="lazy"
           className=" w-full h-full bg-black object-cover object-bottom sm:object-center"
           src="https://res.cloudinary.com/djibehlqi/image/upload/v1722667600/IMG_3268_twwrjc.jpg"
           alt=""
@@ -40,7 +41,7 @@ function About_page() {
             </div>
           </div>
           <div className=" w-full sm:w-[30rem]">
-            <img src="10.png" className=" w-full h-full object-center" alt="" />
+            <img loading="lazy" src="10.png" className=" w-full h-full object-center" alt="" />
           </div>
         </div>
 
@@ -78,6 +79,7 @@ function About_page() {
             </div>
             <div className=" w-full  sm:w-[20rem] border rounded-2xl p-4 border-black flex justify-center items-center">
               <img
+              loading="lazy"
                 className=" w-full h-full items-center"
                 src="10.png"
                 alt=""
@@ -95,6 +97,7 @@ function About_page() {
             </div>
             <div className=" w-full  sm:w-[20rem] border rounded-2xl p-4 border-black flex justify-center items-center">
               <img
+               loading="lazy"
                 className=" w-full h-full items-center"
                 src="10.png"
                 alt=""
@@ -112,6 +115,7 @@ function About_page() {
             </div>
             <div className="  w-full  sm:w-[20rem] border rounded-2xl p-4 border-black flex justify-center items-center">
               <img
+               loading="lazy"
                 className=" w-full h-full items-center"
                 src="10.png"
                 alt=""
@@ -133,7 +137,7 @@ function About_page() {
                 </div>
             </div>
             <div className=" w-full sm:w-[30rem]">
-              <img src="10.png" className=" h-full w-full object-center" alt="" />
+              <img  loading="lazy" src="10.png" className=" h-full w-full object-center" alt="" />
             </div>
           </div>
         </div>
@@ -148,7 +152,7 @@ function About_page() {
                 </div>
             </div>
             <div className=" w-full sm:w-[30rem]">
-              <img src="10.png" className=" h-full w-full object-center" alt="" />
+              <img  loading="lazy" src="10.png" className=" h-full w-full object-center" alt="" />
             </div>
           </div>
         </div>
@@ -163,7 +167,7 @@ function About_page() {
                                 </div>
             </div>
             <div className=" w-full sm:w-[30rem]">
-              <img src="10.png" className=" h-full w-full object-center" alt="" />
+              <img  loading="lazy" src="10.png" className=" h-full w-full object-center" alt="" />
             </div>
           </div>
         </div>
@@ -178,7 +182,7 @@ function About_page() {
                 </div>
             </div>
             <div className=" w-full sm:w-[30rem]">
-              <img src="10.png" className=" h-full w-full object-center" alt="" />
+              <img  loading="lazy" src="10.png" className=" h-full w-full object-center" alt="" />
             </div>
           </div>
         </div>
