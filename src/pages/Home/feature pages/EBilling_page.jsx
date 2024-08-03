@@ -34,8 +34,7 @@ function EBilling_page() {
     <Feature_card
       headOne={"The Perfect Billing "}
       headTwo={"Software for Restaurant Management"}
-      content={"Upgrade your restaurant with multi-screen monitor billing software. Process orders and payments efficiently from different sections. Combine with other programs for real-time sales, inventory control, and reporting, ensuring smooth workflow and enhanced customer satisfaction."
-      }
+      content={`Upgrade your restaurant with multi-screen monitor billing software. Process orders and payments efficiently from different sections. Combine with other programs for real-time sales, inventory control, and reporting, ensuring smooth workflow and enhanced customer satisfaction.`}
       mainImage={"10.png"}
       mainHeadOne={
         "All-in-one restaurant"

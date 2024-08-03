@@ -8,6 +8,7 @@ import Container from "./utils/Container"
 import FreeDemo from "./Home/FreeDemo"
 import OutletCard from "./utils/OutletCard"
 import Feature_card from "./utils/FeatureCard"
+import Card from "./utils/Card"
 export {
     Navbar,
     Nav_Cards,
@@ -18,5 +19,6 @@ export {
     Container,
     FreeDemo,
     OutletCard,
-    Feature_card
+    Feature_card,
+    Card
 }

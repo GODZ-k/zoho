@@ -27,6 +27,9 @@ import DetailingReport_page from "./pages/Home/feature pages/DetailingReport_pag
 import CRM_page from "./pages/Home/feature pages/Crm_page.jsx";
 import EBilling_page from "./pages/Home/feature pages/EBilling_page.jsx";
 import Pos_page from "./pages/Home/feature pages/Pos_page.jsx";
+import Integration_page from "./pages/Home/additions/Integration_page.jsx";
+import Application_page from "./pages/Home/additions/Application_page.jsx";
+import About_page from "./pages/Home/About_page.jsx";
 
 
 function App() {
@@ -60,6 +63,11 @@ function App() {
         <Route path="/detailing-report" element={<DetailingReport_page/>}/>
         <Route path="/crm" element={<CRM_page/>}/>
         <Route path="/pos" element={<Pos_page/>}/>
+
+        {/* Additions page  */}
+        <Route path="/integration" element={<Integration_page/>}/>
+        <Route path="/application" element={<Application_page/>} />
+        <Route path="/about-us" element={<About_page/>} />
 
       </Route>
     </Routes>

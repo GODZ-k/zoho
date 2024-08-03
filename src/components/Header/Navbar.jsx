@@ -18,92 +18,92 @@ function Navbar() {
         {
           name: "Fine Dine",
           slug: "fine-dine",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417843/Fine_Dine_w3bip3.png",
+          icon: "Fine Dine.png",
         },
         {
           name: "Casual Dining",
           slug: "casual-dining",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417837/Casual_Dining_wvv6n1.png",
+          icon: "Casual Dining.png",
         },
         {
           name: "Bar & Brewery",
           slug: "bar&brewery",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417827/Bar_Brewery_ffs3tz.png",
+          icon: "Bar & Brewery.png",
         },
         {
           name: "Cafe",
           slug: "cafe",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417833/Cafe_oriv1y.png",
+          icon: "Cafe.png",
         },
         {
           name: "Pizzeria",
           slug: "pizzeria",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417852/Pizzeria_lwkhas.png",
+          icon: "Pizzeria.png",
         },
         {
           name: "Fast Casual",
           slug: "fast-casual",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417839/Fast_Casual_wdftal.png",
+          icon: "Fast Casual.png",
         },
         {
           name: "Cloud Kitchens",
           slug: "cloud-kitchens",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417838/Cloud_Kitchens_p4cpv8.png",
+          icon: "Cloud Kitchens.png",
         },
         {
           name: "Food Truck",
           slug: "food-truck",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417847/Food_Truck_ixaq2m.png",
+          icon: "Food Truck.png",
         },
         {
           name: "Fast Food",
           slug: "fast-food",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417842/Fast_Food_chjlqe.png",
+          icon: "Fast Food.png",
         },
         {
           name: "Bistros",
           slug: "bistros",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417828/Bistros_ojonk4.png",
+          icon: "Bistros.png",
         },
         {
           name: "Brasseries",
           slug: "brasseries",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417830/Brasseries_errjav.png",
+          icon: "Brasseries.png",
         },
         {
           name: "Large Food Chains",
           slug: "food-chain",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417849/Large_Food_Chains_bleubd.png",
+          icon: "Large Food Chains.png",
         },
         {
           name: "Ice-Creams & Desserts",
           slug: "icecream&dessert",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417848/Ice-Creams_Desserts_gdiycw.png",
+          icon: "Ice-Creams & Desserts.png",
         },
         {
           name: "QSR",
           slug: "qsr",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417860/QSR_c7kopi.png",
+          icon: "QSR.png",
         },
         {
           name: "Buffet",
           slug: "buffet",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417832/Buffet_zehy9a.png",
+          icon: "Buffet.png",
         },
         {
           name: "Food Court",
           slug: "food-court",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417823/16_i10mup.png",
+          icon: "food court.png",
         },
         {
           name: "Pop Up Restaurant",
           slug: "popup-restaurant",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417853/Pop_Up_Restaurants_zauu2o.png",
+          icon: "Pop Up Restaurants.png",
         },
         {
           name: "Bakery",
           slug: "bakery",
-          icon: "https://res.cloudinary.com/dyslwsvb1/image/upload/v1722417824/Bakery_n4jvim.png",
+          icon: "Bakery.png",
         },
       ],
     },
@@ -168,9 +168,18 @@ function Navbar() {
           name: "Linked-in",
           slug: "https://www.linkedin.com/company/qrdine-in/",
         },
+        {
+          name: "About Us",
+          slug: "about-us",
+        },
       ],
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
 
   function handlecompanyDropdown() {
     setCompany(true);
@@ -336,7 +345,7 @@ function Navbar() {
                       <div>
                         <div className=" w-16 h-16 text-white flex justify-center items-center">
                           <img
-                            src={item.icon}
+                            src={`Fine_Dine_2/${item.icon}`}
                             className=" h-full w-full object-center object-cover flex justify-center items-center"
                             alt=""
                           />
@@ -396,13 +405,13 @@ function Navbar() {
           onClick={closeDropdowns}
           ref={ref}
           className={`transition-all duration-150 ${
-            socialstep ? "translate-y-0" : "opacity-0 translate-y-4"
-          } absolute right-[8rem] top-[4.5rem] w-48  rounded-md px-6 py-2 bg-white`}
+            socialstep ? "translate-y-0 visible" : "opacity-0 invisible translate-y-4"
+          } absolute right-[8rem] top-[4.5rem] w-48  rounded-xl px-4 py-2 bg-[#fffefa] border border-x-gray-300 border-r-gray-300 border-l-gray-300`}
         >
           <div>
             <ul className="">
               {subNavData[3].subItem.map((item) => (
-                <li key={item.name} className="pb-3">
+                <li key={item.name} className="pb-3 px-4 pt-2 hover:bg-gray-100 rounded-xl flex justify-start items-center">
                  <a href={item.slug}>{item.name}</a>
                 </li>
               ))}
@@ -434,6 +443,7 @@ function Navbar() {
           </button>
         </div>
         <div
+        
           className={`${
             navbar
               ? "opacity-100 translate-y-0 visible"
@@ -471,7 +481,7 @@ function Navbar() {
                   >
                     <ul className=" py-2 pl-2">
                       {item.subItem.map((subItem) => (
-                        <Link to={subItem?.slug}>
+                        <Link onClick={()=> setNavbar(false)} to={subItem?.slug}>
                           <li className=" rounded-md hover:bg-[#e7e7e76e] p-2 cursor-pointer">
                             {subItem.name}
                           </li>
@@ -493,6 +503,8 @@ function Navbar() {
           </div>
         </div>
       </nav>
+
+      
     </div>
   );
 }

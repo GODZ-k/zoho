@@ -7,25 +7,19 @@ function Footer() {
       <div class="w-full">
         <div className=" flex gap-10 sm:gap-20 md:gap-28 flex-wrap lg:flex-nowrap  lg:justify-between  w-full">
           <div class="flex flex-col items-start gap-2">
-            <h1 class="font-semibold text-lg">POS</h1>
+            <h1 class="font-semibold text-lg">Additions</h1>
             <ul class="flex justify-center text-gray-700 flex-col gap-4">
               <li className=" pt-3">
-                <Link>Billing</Link>
+                <Link to={"/application"}>Application</Link>
               </li>
               <li>
-                <Link>Inventory</Link>
+                <Link to={"e-billing"}>Billing</Link>
               </li>
               <li>
-                <Link>Reporting</Link>
+                <Link to={"crm"}>CRM</Link>
               </li>
               <li>
-                <Link>Online Ordering</Link>
-              </li>
-              <li>
-                <Link>CRM</Link>
-              </li>
-              <li>
-                <Link>Menu</Link>
+                <Link to={"integration"}>Integration</Link>
               </li>
             </ul>
             <button class="bg-black py-2 px-4 mt-2 text-white border rounded-md text-sm">
@@ -150,13 +144,7 @@ function Footer() {
                 <Link>Support</Link>
               </li>
               <li>
-                <Link>About Us</Link>
-              </li>
-              <li>
-                <Link>Reseller</Link>
-              </li>
-              <li>
-                <Link>Magazine</Link>
+                <Link to={"about-us"}>About Us</Link>
               </li>
             </ul>
           </div>
@@ -198,7 +186,7 @@ function Footer() {
        <div className=" inline-block">
        <div className=" flex flex-col gap-5">
           <div className=" text-2xl font-semibold">Get in touch</div>
-          <div className=" w-80">
+          <div className=" w-fit sm:w-80">
             <div className=" flex gap-2 items-center pb-1">
               <i class="fa-solid fa-location-dot"></i>Noida location
             </div>
@@ -216,7 +204,7 @@ function Footer() {
           </div>
         </div>
        </div>
-        <div className=" inline-block w-96">
+        <div className=" inline-block sm:w-96">
           <div className=" font-semibold text-2xl">Newsletter</div>
           <div className=" text-base py-2 text-gray-700">
             Sign up to get more every update
