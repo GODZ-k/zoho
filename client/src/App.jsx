@@ -12,6 +12,8 @@ import Profile_Page from "./pages/Home/auth/Profile_Page";
 import EditProfile_Page from "./pages/Home/auth/EditProfile_Page";
 import UpdatePasswordPage from "./pages/Home/auth/UpdatePasswordPage";
 import { getProfile } from "./Api/ApiData";
+import PaymentHistory_Page from "./pages/Home/Dashboard/PaymentHistory_Page";
+import Dashboard_Page from "./pages/Home/Dashboard/Dashboard_Page";
 
 
 // Lazy load the Layout component
@@ -69,13 +71,15 @@ function App() {
         <Route index element={<Suspense fallback={<Loader/>}><Home_page/></Suspense>} />
 
         {/* auth */}
-        <Route path="/login" element={<Login_Page />} />
+          <Route path="/login" element={<Login_Page />} />
           <Route path="/signup" element={<SignUp_Page/>}/>
           <Route path="/user/forgot-password" element={<ForgotPasswordPage/>}/>
           <Route path="/user/reset-password/:id/:token" element={<ResetPasswordPage/>}/>
           <Route path="/user/profile" element={<Profile_Page/>}/>
           <Route path="/user/update/password" element={<UpdatePasswordPage/>}/>
           <Route path="/user/edit-profile" element={<EditProfile_Page/>}/>
+          <Route path="/user/dashboard" element={<Dashboard_Page />} />
+          <Route path="/user/payment/history" element={<PaymentHistory_Page/>} />
         {/* Outlet pages */}
         <Route path="/fine-dine" element={<Suspense fallback={<Loader/>}><FineDine_page /></Suspense>} />
         <Route path="/casual-dining" element={<Suspense fallback={<Loader/>}><CasualDining_page /></Suspense>} />

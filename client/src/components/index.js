@@ -22,6 +22,9 @@ import Signup from "./auth/Signup/Signup"
 import ProfileNav from "./auth/Profile/ProfileNav"
 import ForgotPassword from "./auth/forgot password/ForgotPassword"
 import ProfileCard from "./utils/ProfileCard"
+import Dashboard from "./auth/Dashboard/Dashboard"
+import ThemeToggle from "./utils/ToggleTheme"
+import PaymentHistory from "./auth/PaymentHistory/PaymentHistory"
 export {
     Navbar,
     Nav_Cards,
@@ -46,6 +49,9 @@ export {
     ResetPassword,
     Signup,
     ProfileNav,
-    ProfileCard
+    ProfileCard,
+    Dashboard,
+    PaymentHistory,
+    ThemeToggle
 
 }

@@ -11,11 +11,15 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Logout from "@mui/icons-material/Logout";
 import { userLogout } from "../../Api/ApiData";
+import ThemeToggle from "../utils/ToggleTheme";
 
 function Navbar() {
   const user = useSelector((state) => state.auth.status);
   const userData = useSelector((state) => state.auth.userProfile);
-  const [firstName, setFirstName] = useState(userData ? userData.firstName : "");
+  const [firstName, setFirstName] = useState(
+    userData ? userData.firstName : ""
+  );
+  const [theme, setTheme] = useState("light");
   const [avatar, setAvatar] = useState(userData ? userData.avatar : "");
   const [product, setProduct] = useState(false);
   const [company, setCompany] = useState(false);
@@ -26,8 +30,8 @@ function Navbar() {
   const mobilenavbarRef = useRef(null);
   const ref = useRef(null);
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const subNavData = [
     {
@@ -195,9 +199,9 @@ function Navbar() {
   ];
 
   useEffect(() => {
-    if(userData){
+    if (userData) {
       setFirstName(userData.firstName || "");
-      setAvatar(userData.avatar || "" )
+      setAvatar(userData.avatar || "");
     }
   }, [userData]);
 
@@ -205,9 +209,8 @@ function Navbar() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-
   const logoutUser = async () => {
-    await userLogout(dispatch,navigate)
+    await userLogout(dispatch, navigate);
   };
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -220,12 +223,29 @@ function Navbar() {
     setAnchorEl(null);
   };
 
-
   function handlecompanyDropdown() {
     setCompany(true);
     setProduct(false);
     setSocialStep(false);
   }
+
+
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
 
   function handleProductDropdown() {
     setProduct(!product);
@@ -296,7 +316,7 @@ function Navbar() {
             <Link to="/">
               <div className="px-4 inline-block w-28">
                 <img
-                loading="lazy"
+                  loading="lazy"
                   className="w-full h-full"
                   src="https://qrdine.in/assets/img/logo.png"
                   alt="Logo"
@@ -331,8 +351,11 @@ function Navbar() {
               </ul>
             </div>
           </div>
-          <div className="hidden lg:flex gap-4">
+          <div className=" flex flex-row lg:flex gap-4">
             <div className=" pl-0 pr-3 sm:pl-10 gap-4 flex items-center">
+              <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+            </div>
+            <div className=" hidden pl-0 pr-3  gap-4 lg:flex items-center">
               <ul className="font-light gap-8 flex">
                 <li
                   onMouseOver={handleSocialStepDropdown}
@@ -347,120 +370,119 @@ function Navbar() {
                 </li>
               </ul>
             </div>
-            { user ? (
-               <div>
-      
-               <Box
-                 sx={{ display: "flex", alignItems: "center", textAlign: "center" }}
-               >
-                 <Tooltip title="Account settings">
-                   <IconButton
-                     onClick={handleClick}
-                     size="large"
-                     sx={{ ml: 2 , padding:0 }}
-                     aria-controls={open ? "account-menu" : undefined}
-                     aria-haspopup="true"
-                     aria-expanded={open ? "true" : undefined}
-                   >
-                     <Avatar
-                       sx={{ width: 35, height: 35 }}
-                       style={
-                         avatar
-                           ? { background: "none" }
-                           : { backgroundColor: "#fffff" }
-                       }
-                     >
-                       {(avatar && (
-                         <img src={avatar} alt="avatar" />
-                       )) ||
-                         (firstName &&
-                           firstName.charAt(0).toUpperCase())}
-                     </Avatar>
-                   </IconButton>
-                 </Tooltip>
-               </Box>
-               <Menu
-                 anchorEl={anchorEl}
-                 id="account-menu"
-                 open={open}
-                 onClose={handleClose}
-                 onClick={handleClose}
-                 PaperProps={{
-                   elevation: 0,
-                   sx: {
-                     overflow: "visible",
-                     filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-                     mt: 1.5,
-                     "& .MuiAvatar-root": {
-                       width: 32,
-                       height: 32,
-                       ml: -0.5,
-                       mr: 1,
-                     },
-                     "&::before": {
-                       content: '""',
-                       display: "block",
-                       position: "absolute",
-                       top: 0,
-                       right: 14,
-                       width: 10,
-                       height: 10,
-                       bgcolor: "background.#0e7be5",
-                       transform: "translateY(-50%) rotate(45deg)",
-                       zIndex: 0,
-                     },
-                   },
-                 }}
-                 transformOrigin={{ horizontal: "right", vertical: "top" }}
-                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-               >
-                 <Link to="/user/profile">
-                   <MenuItem onClick={handleClose}>
-                     <Avatar
-                       sx={{ width: 40, height: 40 }}
-                       style={
-                         avatar
-                           ? { background: "none" }
-                           : { backgroundColor: "#fffff" }
-                       }
-                     >
-                       {(avatar && (
-                         <img src={avatar} alt="avatar" />
-                       )) ||
-                         (firstName && firstName.charAt(0))}
-                     </Avatar>{" "}
-                     Profile
-                   </MenuItem>
-                 </Link>
-                 <Divider />
-                 <MenuItem onClick={logoutUser}>
-                   <ListItemIcon>
-                     <Logout fontSize="small" />
-                   </ListItemIcon>
-                   Logout
-                 </MenuItem>
-               </Menu>
-               
-             </div>
+            {user ? (
+              <div>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                >
+                  <Tooltip title="Account settings">
+                    <IconButton
+                      onClick={handleClick}
+                      size="large"
+                      sx={{ ml: 2, padding: 0 }}
+                      aria-controls={open ? "account-menu" : undefined}
+                      aria-haspopup="true"
+                      aria-expanded={open ? "true" : undefined}
+                    >
+                      <Avatar
+                        sx={{ width: 35, height: 35 }}
+                        style={
+                          avatar
+                            ? { background: "none" }
+                            : { backgroundColor: "#fffff" }
+                        }
+                      >
+                        {(avatar && <img src={avatar} alt="avatar" />) ||
+                          (firstName && firstName.charAt(0).toUpperCase())}
+                      </Avatar>
+                    </IconButton>
+                  </Tooltip>
+                </Box>
+                <Menu
+                  anchorEl={anchorEl}
+                  id="account-menu"
+                  open={open}
+                  onClose={handleClose}
+                  onClick={handleClose}
+                  PaperProps={{
+                    elevation: 0,
+                    sx: {
+                      overflow: "visible",
+                      filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                      mt: 1.5,
+                      "& .MuiAvatar-root": {
+                        width: 32,
+                        height: 32,
+                        ml: -0.5,
+                        mr: 1,
+                      },
+                      "&::before": {
+                        content: '""',
+                        display: "block",
+                        position: "absolute",
+                        top: 0,
+                        right: 14,
+                        width: 10,
+                        height: 10,
+                        bgcolor: "background.#0e7be5",
+                        transform: "translateY(-50%) rotate(45deg)",
+                        zIndex: 0,
+                      },
+                    },
+                  }}
+                  transformOrigin={{ horizontal: "right", vertical: "top" }}
+                  anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+                >
+                  <Link to="/user/profile">
+                    <MenuItem onClick={handleClose}>
+                      <Avatar
+                        sx={{ width: 40, height: 40 }}
+                        style={
+                          avatar
+                            ? { background: "none" }
+                            : { backgroundColor: "#fffff" }
+                        }
+                      >
+                        {(avatar && <img src={avatar} alt="avatar" />) ||
+                          (firstName && firstName.charAt(0))}
+                      </Avatar>{" "}
+                      Profile
+                    </MenuItem>
+                  </Link>
+                  <Divider />
+                  <MenuItem onClick={logoutUser}>
+                    <ListItemIcon>
+                      <Logout fontSize="small" />
+                    </ListItemIcon>
+                    Logout
+                  </MenuItem>
+                </Menu>
+              </div>
             ) : (
-              <>
-              <Link className=" flex justify-center items-center" to={"login"}>
-            <button className="text-gray-700 ">Sign in</button>
-            </Link>
-            <Link to={"signup"}>
-            <button
-              className={`${
-                isScrolled
-                  ? "bg-[#f60014] text-white"
-                  : "bg-transparent text-[#f60014]"
-              } hover:text-white hover:bg-[#f60014] transition-all ease-in-out duration-300 px-4 py-1.5 rounded-sm border border-[#f60014] `}
-            >
-              Sign up
-            </button>
-            </Link>
-              </>
-            )
-            }
+              <div className=" lg:flex gap-3 hidden">
+                <Link
+                  className=" flex justify-center items-center"
+                  to={"login"}
+                >
+                  <button className="text-gray-700 ">Sign in</button>
+                </Link>
+                <Link to={"signup"}>
+                  <button
+                    className={`${
+                      isScrolled
+                        ? "bg-[#f60014] text-white"
+                        : "bg-transparent text-[#f60014]"
+                    } hover:text-white hover:bg-[#f60014] transition-all ease-in-out duration-300 px-4 py-1.5 rounded-sm border border-[#f60014] `}
+                  >
+                    Sign up
+                  </button>
+                </Link>
+              </div>
+            )}
             {/* <Link className=" flex justify-center items-center" to={"login"}>
             <button className="text-gray-700 ">Sign in</button>
             </Link>
@@ -504,7 +526,7 @@ function Navbar() {
                       <div>
                         <div className=" w-16 h-16 text-white flex justify-center items-center">
                           <img
-                          loading="lazy"
+                            loading="lazy"
                             src={`Fine_Dine_2/${item.icon}`}
                             className=" h-full w-full object-center object-cover flex justify-center items-center"
                             alt=""
@@ -546,7 +568,7 @@ function Navbar() {
                       <div>
                         <div className=" h-16 w-16 flex justify-center items-center">
                           <img
-                          loading="lazy"
+                            loading="lazy"
                             src={item.icon}
                             className=" h-full w-full  object-center"
                             alt=""
@@ -566,16 +588,26 @@ function Navbar() {
           onClick={closeDropdowns}
           ref={ref}
           className={`transition-all duration-150 ${
-            socialstep ? "translate-y-0 visible" : "opacity-0 invisible translate-y-4"
-          } absolute right-[8rem] top-[4.5rem] w-48  rounded-xl px-4 py-2 bg-[#fffefa] border border-x-gray-300 border-r-gray-300 border-l-gray-300`}
+            socialstep
+              ? "translate-y-0 visible"
+              : "opacity-0 invisible translate-y-4"
+          } absolute right-[6rem] top-[4.5rem] w-48  rounded-xl px-4 py-2 bg-[#fffefa] border border-x-gray-300 border-r-gray-300 border-l-gray-300`}
         >
           <div>
             <ul className="">
               {subNavData[3].subItem.map((item) => (
-                <NavLink to={item.slug} className={({ isActive }) => `${isActive ? "bg-gray-100" : "bg-transparent"} rounded-xl`}>
-                <li key={item.name} className="pb-3 px-4 pt-2 hover:bg-gray-100 rounded-xl flex justify-start items-center">
-                 <div>{item.name}</div>
-                </li>
+                <NavLink
+                  to={item.slug}
+                  className={({ isActive }) =>
+                    `${isActive ? "bg-gray-100" : "bg-transparent"} rounded-xl`
+                  }
+                >
+                  <li
+                    key={item.name}
+                    className="pb-3 px-4 pt-2 hover:bg-gray-100 rounded-xl flex justify-start items-center"
+                  >
+                    <div>{item.name}</div>
+                  </li>
                 </NavLink>
               ))}
             </ul>
@@ -584,7 +616,10 @@ function Navbar() {
       </nav>
 
       {/* mobile and tablet view */}
-      <nav ref={mobilenavbarRef} className=" z-10 fixed lg:hidden bottom-0 left-0 w-full">
+      <nav
+        ref={mobilenavbarRef}
+        className=" z-10 fixed lg:hidden bottom-0 left-0 w-full"
+      >
         <div className=" flex">
           <button
             onClick={handleNavbar}
@@ -602,21 +637,20 @@ function Navbar() {
               isScrolled ? "bg-[#f60014] text-white" : "bg-white text-[#f60014]"
             } hover:text-white hover:bg-[#f60014]  transition-all duration-500 flex justify-center items-center font-semibold w-full`}
           >
-         <Link to={"signup"}>   <div className=" uppercase">Sign up for free</div></Link>
+            <Link to={"signup"}>
+              {" "}
+              <div className=" uppercase">Sign up for free</div>
+            </Link>
           </button>
         </div>
         <div
-        
           className={`${
             navbar
               ? "opacity-100 translate-y-0 visible"
               : "opacity-0 h-0 translate-y-4 invisible"
           }  duration-300 border border-gray-200 absolute bottom-16 rounded-md bg-white w-80 max-h-[70vh] overflow-y-scroll px-5 py-4 left-1`}
         >
-          <ul
-            
-            className=" border-b border-b-gray-300 border-dashed pb-5"
-          >
+          <ul className=" border-b border-b-gray-300 border-dashed pb-5">
             {subNavData.map((item) => (
               <li
                 className=" py-2 font-light text-gray-900"
@@ -644,7 +678,10 @@ function Navbar() {
                   >
                     <ul className=" py-2 pl-2">
                       {item.subItem.map((subItem) => (
-                        <Link onClick={()=> setNavbar(false)} to={subItem?.slug}>
+                        <Link
+                          onClick={() => setNavbar(false)}
+                          to={subItem?.slug}
+                        >
                           <li className=" rounded-md hover:bg-[#e7e7e76e] p-2 cursor-pointer">
                             {subItem.name}
                           </li>
@@ -657,10 +694,10 @@ function Navbar() {
             ))}
           </ul>
           <div className="flex w-full py-1 flex-col justify-start items-start">
-           <Link to={"login"} className=" w-full">
-           <button className=" py-2  text-red-500 font-semibold">
-              Sign In
-            </button>
+            <Link to={"login"} className=" w-full">
+              <button className=" py-2  text-red-500 font-semibold">
+                Sign In
+              </button>
             </Link>
             <button className="font-light text-gray-700">
               All QRDine-In Products
@@ -668,8 +705,6 @@ function Navbar() {
           </div>
         </div>
       </nav>
-
-      
     </div>
   );
 }
