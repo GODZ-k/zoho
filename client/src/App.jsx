@@ -1,6 +1,13 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Loader } from "./components";
+import Login_Page from "./pages/Home/auth/Login_page";
+import SignUp_Page from "./pages/Home/auth/SignUp_page";
+import ForgotPasswordPage from "./pages/Home/auth/ForgotPassword_page";
+import ResetPasswordPage from "./pages/Home/auth/ResetPassword_page";
+import Profile_Page from "./pages/Home/auth/Profile_Page";
+import EditProfile_Page from "./pages/Home/auth/EditProfile_Page";
+import UpdatePasswordPage from "./pages/Home/auth/UpdatePasswordPage";
 
 
 // Lazy load the Layout component
@@ -42,6 +49,15 @@ function App() {
     <Routes>
       <Route path="/" element={<Suspense fallback={<Loader />}><Layout /></Suspense>}>
         <Route index element={<Suspense fallback={<Loader/>}><Home_page/></Suspense>} />
+
+        {/* auth */}
+        <Route path="/login" element={<Login_Page />} />
+          <Route path="/signup" element={<SignUp_Page/>}/>
+          <Route path="/user/forgot-password" element={<ForgotPasswordPage/>}/>
+          <Route path="/user/reset-password/:id/:token" element={<ResetPasswordPage/>}/>
+          <Route path="/user/profile" element={<Profile_Page/>}/>
+          <Route path="/user/update/password" element={<UpdatePasswordPage/>}/>
+          <Route path="/user/edit-profile" element={<EditProfile_Page/>}/>
         {/* Outlet pages */}
         <Route path="/fine-dine" element={<Suspense fallback={<Loader/>}><FineDine_page /></Suspense>} />
         <Route path="/casual-dining" element={<Suspense fallback={<Loader/>}><CasualDining_page /></Suspense>} />

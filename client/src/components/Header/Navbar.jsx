@@ -307,7 +307,10 @@ function Navbar() {
                 </li>
               </ul>
             </div>
+            <Link className=" flex justify-center items-center" to={"login"}>
             <button className="text-gray-700 ">Sign in</button>
+            </Link>
+            <Link to={"signup"}>
             <button
               className={`${
                 isScrolled
@@ -317,6 +320,7 @@ function Navbar() {
             >
               Sign up
             </button>
+            </Link>
           </div>
         </div>
         <div
@@ -426,7 +430,7 @@ function Navbar() {
       </nav>
 
       {/* mobile and tablet view */}
-      <nav className=" z-10 fixed lg:hidden bottom-0 left-0 w-full">
+      <nav ref={mobilenavbarRef} className=" z-10 fixed lg:hidden bottom-0 left-0 w-full">
         <div className=" flex">
           <button
             onClick={handleNavbar}
@@ -444,7 +448,7 @@ function Navbar() {
               isScrolled ? "bg-[#f60014] text-white" : "bg-white text-[#f60014]"
             } hover:text-white hover:bg-[#f60014]  transition-all duration-500 flex justify-center items-center font-semibold w-full`}
           >
-            <div className=" uppercase">Sign up for free</div>
+         <Link to={"signup"}>   <div className=" uppercase">Sign up for free</div></Link>
           </button>
         </div>
         <div
@@ -456,7 +460,7 @@ function Navbar() {
           }  duration-300 border border-gray-200 absolute bottom-16 rounded-md bg-white w-80 max-h-[70vh] overflow-y-scroll px-5 py-4 left-1`}
         >
           <ul
-            ref={mobilenavbarRef}
+            
             className=" border-b border-b-gray-300 border-dashed pb-5"
           >
             {subNavData.map((item) => (
@@ -498,10 +502,12 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="flex py-1 flex-col justify-start items-start">
-            <button className=" py-2 text-red-500 font-semibold">
+          <div className="flex w-full py-1 flex-col justify-start items-start">
+           <Link to={"login"} className=" w-full">
+           <button className=" py-2  text-red-500 font-semibold">
               Sign In
             </button>
+            </Link>
             <button className="font-light text-gray-700">
               All QRDine-In Products
             </button>
