@@ -40,7 +40,7 @@ function Navbar() {
         {
           name: "Fine Dine",
           slug: "fine-dine",
-          icon: "Fine Dine.png",
+          icon: "Fine_Dine.png",
         },
         {
           name: "Casual Dining",
@@ -371,7 +371,7 @@ function Navbar() {
               </ul>
             </div>
             {user ? (
-              <div>
+              <div onClick={closeDropdowns}>
                 <Box
                   sx={{
                     display: "flex",
@@ -439,7 +439,7 @@ function Navbar() {
                 >
                   <Link to="/user/profile">
                     <MenuItem onClick={handleClose}>
-                      <Avatar
+                      {/* <Avatar
                         sx={{ width: 40, height: 40 }}
                         style={
                           avatar
@@ -449,8 +449,13 @@ function Navbar() {
                       >
                         {(avatar && <img src={avatar} alt="avatar" />) ||
                           (firstName && firstName.charAt(0))}
-                      </Avatar>{" "}
+                      </Avatar>{" "} */}
                       Profile
+                    </MenuItem>
+                  </Link>
+                  <Link to="/user/dashboard">
+                    <MenuItem onClick={handleClose}>
+                      Dashboard
                     </MenuItem>
                   </Link>
                   <Divider />

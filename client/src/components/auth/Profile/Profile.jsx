@@ -66,7 +66,7 @@ function Profile() {
   const verifyUserPhone = async () => {
     try {
       if (!otpGenearted) {
-        await otpGenerate(user.phone, setOtpComponent, setOtpGenerated , setIsLoading);
+        await otpGenearted(user.phone, setOtpComponent, setOtpGenerated , setIsLoading);
       } else {
         await verifyPhone(otp, setOtpComponent, setOtpGenerated, dispatch , setIsLoading);
       }

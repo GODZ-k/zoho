@@ -55,7 +55,7 @@ function Dashboard() {
       </div>
 
       <div className=" flex justify-between gap-6 md:gap-0 md:flex-row flex-col-reverse py-8">
-        <div className="  md:w-[64%] lg:w-[75%] w-full">
+        <div className="md:w-[64%] lg:w-[75%] w-full">
 
           <div className=" border dark:!border-[#1E2027] border-[#e9ebed] card-shadow mb-10 dark:!bg-[#15171c] rounded-xl px-4 py-4 w-full">
             <div className=" flex justify-between items-center mb-4">
@@ -216,7 +216,7 @@ function Dashboard() {
                       </td>
                       <td> <div className=" dark:!text-[#B5B7C8] text-[14px] md:text-md text-gray-600 ">Nov 01, 2020</div></td>
                       <td className=" text-end">
-                        <button className=" dark:!text-[#B5B7C8] xt-[14px] md:text-md dark:bg-[#2d2d2d] bg-gray-200 text-gray-700 px-3 rounded-md py-2">
+                        <button className=" dark:!text-[#B5B7C8] my-3 xt-[14px] md:text-md dark:bg-[#2d2d2d] bg-gray-200 text-gray-700 px-3 rounded-md py-2">
                           Download
                         </button>
                       </td>
