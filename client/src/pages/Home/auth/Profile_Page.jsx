@@ -1,8 +1,9 @@
 import React from 'react'
-import { Profile } from '../../../components/index'
+import { Container, Profile } from '../../../components/index'
 
 function Profile_Page() {
   return (
+    
 <Profile/>
   )
 }

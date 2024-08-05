@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Input, Button, Loading } from "../../index";
+import { Input, Button, Loading, Container } from "../../index";
 import { useDispatch } from "react-redux";
 import { userLogin } from "../../../Api/ApiData";
 
@@ -23,6 +23,7 @@ function Login() {
   };
 
   return (
+    <Container className={"pt-20 px-6 sm:px-8 md:px-10"}>
     <div className="flex justify-between w-full flex-col-reverse lg:flex-row gap-6 ">
       <div className="flex py-3 md:py-0 justify-evenly lg:justify-center">
         <div className="flex md:items-center lg:items-start lg:pt-[25%] lg:pl-[5%] flex-col md:w-[66%]">
@@ -90,6 +91,7 @@ function Login() {
         />
       </div>
     </div>
+    </Container>
   );
 }
 

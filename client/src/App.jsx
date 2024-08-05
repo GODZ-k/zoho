@@ -1,6 +1,9 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { Loader } from "./components";
+
+
 import Login_Page from "./pages/Home/auth/Login_page";
 import SignUp_Page from "./pages/Home/auth/SignUp_page";
 import ForgotPasswordPage from "./pages/Home/auth/ForgotPassword_page";
@@ -8,6 +11,7 @@ import ResetPasswordPage from "./pages/Home/auth/ResetPassword_page";
 import Profile_Page from "./pages/Home/auth/Profile_Page";
 import EditProfile_Page from "./pages/Home/auth/EditProfile_Page";
 import UpdatePasswordPage from "./pages/Home/auth/UpdatePasswordPage";
+import { getProfile } from "./Api/ApiData";
 
 
 // Lazy load the Layout component
@@ -44,6 +48,20 @@ const Application_page = lazy(() => import("./pages/Home/additions/Application_p
 const About_page = lazy(() => import("./pages/Home/About_page"));
 
 function App() {
+
+  const dispatch =  useDispatch()
+
+  useEffect(() => {
+    getProfile(dispatch)
+      .then(() => {
+        console.log("Profile data loaded");
+      })
+      .catch(error => {
+        console.error("Error loading profile data", error);
+      });
+  }, []);
+
+
   return (
     <Suspense fallback={<Loader />}>
     <Routes>

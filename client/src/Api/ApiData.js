@@ -27,7 +27,7 @@ const userLogin = async (setError, setIsLoading, navigate, dispatch, data) => {
         dispatch(login(res.data.user))
         setIsLoading(false)
         toast.success(res.data.msg)
-        navigate('/user/dashboard')
+        navigate('/user/profile')
       })
 
   } catch (error) {

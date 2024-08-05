@@ -1,7 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import Logout from "@mui/icons-material/Logout";
+import { userLogout } from "../../Api/ApiData";
 
 function Navbar() {
+  const user = useSelector((state) => state.auth.status);
+  const userData = useSelector((state) => state.auth.userProfile);
+  const [firstName, setFirstName] = useState(userData ? userData.firstName : "");
+  const [avatar, setAvatar] = useState(userData ? userData.avatar : "");
   const [product, setProduct] = useState(false);
   const [company, setCompany] = useState(false);
   const [socialstep, setSocialStep] = useState(false);
@@ -10,6 +25,9 @@ function Navbar() {
   const [dropdown, setDropdown] = useState("");
   const mobilenavbarRef = useRef(null);
   const ref = useRef(null);
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const subNavData = [
     {
@@ -177,8 +195,30 @@ function Navbar() {
   ];
 
   useEffect(() => {
+    if(userData){
+      setFirstName(userData.firstName || "");
+      setAvatar(userData.avatar || "" )
+    }
+  }, [userData]);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+
+  const logoutUser = async () => {
+    await userLogout(dispatch,navigate)
+  };
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
 
   function handlecompanyDropdown() {
@@ -307,7 +347,104 @@ function Navbar() {
                 </li>
               </ul>
             </div>
-            <Link className=" flex justify-center items-center" to={"login"}>
+            { user ? (
+               <div>
+      
+               <Box
+                 sx={{ display: "flex", alignItems: "center", textAlign: "center" }}
+               >
+                 <Tooltip title="Account settings">
+                   <IconButton
+                     onClick={handleClick}
+                     size="large"
+                     sx={{ ml: 2 , padding:0 }}
+                     aria-controls={open ? "account-menu" : undefined}
+                     aria-haspopup="true"
+                     aria-expanded={open ? "true" : undefined}
+                   >
+                     <Avatar
+                       sx={{ width: 35, height: 35 }}
+                       style={
+                         avatar
+                           ? { background: "none" }
+                           : { backgroundColor: "#fffff" }
+                       }
+                     >
+                       {(avatar && (
+                         <img src={avatar} alt="avatar" />
+                       )) ||
+                         (firstName &&
+                           firstName.charAt(0).toUpperCase())}
+                     </Avatar>
+                   </IconButton>
+                 </Tooltip>
+               </Box>
+               <Menu
+                 anchorEl={anchorEl}
+                 id="account-menu"
+                 open={open}
+                 onClose={handleClose}
+                 onClick={handleClose}
+                 PaperProps={{
+                   elevation: 0,
+                   sx: {
+                     overflow: "visible",
+                     filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                     mt: 1.5,
+                     "& .MuiAvatar-root": {
+                       width: 32,
+                       height: 32,
+                       ml: -0.5,
+                       mr: 1,
+                     },
+                     "&::before": {
+                       content: '""',
+                       display: "block",
+                       position: "absolute",
+                       top: 0,
+                       right: 14,
+                       width: 10,
+                       height: 10,
+                       bgcolor: "background.#0e7be5",
+                       transform: "translateY(-50%) rotate(45deg)",
+                       zIndex: 0,
+                     },
+                   },
+                 }}
+                 transformOrigin={{ horizontal: "right", vertical: "top" }}
+                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+               >
+                 <Link to="/user/profile">
+                   <MenuItem onClick={handleClose}>
+                     <Avatar
+                       sx={{ width: 40, height: 40 }}
+                       style={
+                         avatar
+                           ? { background: "none" }
+                           : { backgroundColor: "#fffff" }
+                       }
+                     >
+                       {(avatar && (
+                         <img src={avatar} alt="avatar" />
+                       )) ||
+                         (firstName && firstName.charAt(0))}
+                     </Avatar>{" "}
+                     Profile
+                   </MenuItem>
+                 </Link>
+                 <Divider />
+                 <MenuItem onClick={logoutUser}>
+                   <ListItemIcon>
+                     <Logout fontSize="small" />
+                   </ListItemIcon>
+                   Logout
+                 </MenuItem>
+               </Menu>
+               
+             </div>
+            ) : (
+              <>
+              <Link className=" flex justify-center items-center" to={"login"}>
             <button className="text-gray-700 ">Sign in</button>
             </Link>
             <Link to={"signup"}>
@@ -321,6 +458,23 @@ function Navbar() {
               Sign up
             </button>
             </Link>
+              </>
+            )
+            }
+            {/* <Link className=" flex justify-center items-center" to={"login"}>
+            <button className="text-gray-700 ">Sign in</button>
+            </Link>
+            <Link to={"signup"}>
+            <button
+              className={`${
+                isScrolled
+                  ? "bg-[#f60014] text-white"
+                  : "bg-transparent text-[#f60014]"
+              } hover:text-white hover:bg-[#f60014] transition-all ease-in-out duration-300 px-4 py-1.5 rounded-sm border border-[#f60014] `}
+            >
+              Sign up
+            </button>
+            </Link> */}
           </div>
         </div>
         <div

@@ -1,9 +1,11 @@
 import React from 'react'
-import { Password } from '../../../components/index'
+import { Container, Password } from '../../../components/index'
 
 function UpdatePasswordPage() {
   return (
+
 <Password/>
+      
   )
 }
 

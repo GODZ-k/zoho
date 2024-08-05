@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
-import {Loading , ProfileNav , Input} from "../../index";
+import {Loading , ProfileNav , Input , Container} from "../../index";
 import { updatePassword } from "../../../Api/ApiData";
 
 function Password() {
@@ -56,7 +56,8 @@ const passwordData = {
   };
 
   return (
-    <div className="bg-gray-200 flex justify-center px-2 sm:px-10 md:px-0 gap-2">
+    <div className="bg-gray-200 ">
+      <Container className="px-6 sm:px-8 md:px-10 flex justify-center gap-2">
       <ProfileNav/>
       <div className=" rounded-xl bg-white m-3 shadow-sm border-gray-400 w-full md:w-[70%]  lg:w-[40%] py-3 px-4">
         <div className=" relative">
@@ -138,6 +139,7 @@ const passwordData = {
           </div>
         </form>
       </div>
+      </Container>
     </div>
   );
 }

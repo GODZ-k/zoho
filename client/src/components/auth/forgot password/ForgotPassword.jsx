@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Input , Button , Loading} from '../../index'
+import { Input , Button , Loading, Container} from '../../index'
 import { passwordForgot } from '../../../Api/ApiData'
 
 function ForgotPassword() {
@@ -12,6 +12,7 @@ function ForgotPassword() {
   }
 
   return (
+    <Container className=' px-6 sm:px-8 md:px-10'>
     <div className="flex justify-between w-full flex-col-reverse lg:flex-row">
     <div className="flex py-3 md:py-0 justify-center lg:justify-end">
     <div className="flex md:items-center lg:items-start lg:pt-[25%] lg:pl-[5%] flex-col md:w-[66%]">
@@ -40,6 +41,7 @@ function ForgotPassword() {
       />
     </div>
   </div>
+      </Container>
   )
 }
 

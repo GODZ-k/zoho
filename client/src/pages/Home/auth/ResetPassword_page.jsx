@@ -1,9 +1,11 @@
 import React from 'react'
-import { ResetPassword } from '../../../components/index'
+import { Container, ResetPassword } from '../../../components/index'
 
 function ResetPasswordPage() {
   return (
+    
 <ResetPassword/>
+      
   )
 }
 

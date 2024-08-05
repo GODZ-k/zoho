@@ -1,9 +1,10 @@
 import React from 'react'
-import {Input, Button} from '../../index'
+import {Input, Button , Container} from '../../index'
 import { Link } from 'react-router-dom'
 
 function Signup() {
   return (
+    <Container className={ "px-6 sm:px-8 md:px-10"}>
     <div className="flex justify-between w-full flex-col-reverse lg:flex-row ">
       <div className="flex py-3 md:py-0 justify-center lg:justify-end">
       <div className="flex md:items-center lg:items-start lg:pt-[5%] lg:pl-[5%] flex-col md:w-[66%]">
@@ -49,6 +50,7 @@ function Signup() {
         />
       </div>
     </div>
+      </Container>
   )
 }
 

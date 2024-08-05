@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Button , Input , Loading} from "../../index";
+import {Button , Input , Loading , Container} from "../../index";
 import { useNavigate, useParams } from "react-router-dom";
 import { changePassword } from "../../../Api/ApiData";
 
@@ -22,7 +22,8 @@ function ResetPassword() {
 
 
   return (
-    <div className="flex px-3 sm:p-4 md:px-0 md:pt-[6%] justify-between w-full flex-col-reverse lg:flex-row">
+    <Container className="px-6 sm:px-8 md:px-10">
+    <div className="flex justify-between w-full flex-col-reverse lg:flex-row">
       <div className="flex py-3 md:py-0 justify-center lg:justify-end">
         <div className="flex md:items-center lg:items-start lg:pt-[25%] lg:pl-[5%] flex-col md:w-[66%]">
           <h1 className="text-3xl pt-[3%] font-bold">
@@ -75,6 +76,7 @@ function ResetPassword() {
         />
       </div>
     </div>
+    </Container>
   );
 }
 

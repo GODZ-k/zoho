@@ -1,8 +1,9 @@
 import React from 'react'
-import { EditProfile } from '../../../components/index'
+import { Container, EditProfile } from '../../../components/index'
 
 function EditProfile_Page() {
   return (
+    
 <EditProfile/>
   )
 }
