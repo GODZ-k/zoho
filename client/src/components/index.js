@@ -21,7 +21,7 @@ import ResetPassword from "./auth/reset password/ResetPassword"
 import Signup from "./auth/Signup/Signup"
 import ProfileNav from "./auth/Profile/ProfileNav"
 import ForgotPassword from "./auth/forgot password/ForgotPassword"
-
+import ProfileCard from "./utils/ProfileCard"
 export {
     Navbar,
     Nav_Cards,
@@ -45,6 +45,7 @@ export {
     Profile,
     ResetPassword,
     Signup,
-    ProfileNav
+    ProfileNav,
+    ProfileCard
 
 }

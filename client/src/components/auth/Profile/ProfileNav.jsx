@@ -23,7 +23,7 @@ function ProfileNav() {
   ];
 
   return (
-    <div className="bg-white m-3 h-fit shadow-sm rounded-xl border-gray-400 hidden md:block md:w-[13rem]">
+    <div className="bg-white h-fit shadow-sm rounded-xl border-gray-400 hidden md:block md:w-[13rem]">
     <div className=" px-4 py-3 flex flex-col">
       {ProfileNavItems.map((item ) => (
         <NavLink key={item.slug} className={({isActive})=> `${isActive ? 'text-[#1e90ff]' : 'text-black'} py-2 flex`} to={item.slug}>

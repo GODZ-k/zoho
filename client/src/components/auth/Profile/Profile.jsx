@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { deleteAccount, otpGenerate, verifyPhone } from "../../../Api/ApiData";
-import {Loader , Loading , Input , Button , ProfileNav , Container} from "../../index"
+import {Loader , Loading , Input , Button , ProfileNav , Container, ProfileCard} from "../../index"
 
 function Profile() {
   const user = useSelector((state) => state.auth.userProfile);
@@ -87,9 +87,8 @@ function Profile() {
 
   return (
     <div className="bg-gray-200 ">
-      <Container className="px-6 sm:px-8 md:px-10 flex justify-center gap-2">
-      <ProfileNav />
-      <div className="rounded-xl bg-white m-3 shadow-sm border-gray-400 w-full md:w-[70%] lg:w-[40%] py-3 px-4">
+      <Container className="px-6 pb-8 pt-24 sm:px-8 md:px-10 flex justify-center gap-2">
+      <ProfileCard>
         <div className="relative">
           <div
             ref={ref}
@@ -238,7 +237,7 @@ function Profile() {
 
         </div>
        
-      </div>
+      </ProfileCard>
       </Container>
     </div>
   );

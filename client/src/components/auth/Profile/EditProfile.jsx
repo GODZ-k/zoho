@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {  NavLink, useNavigate } from "react-router-dom";
-import {Loader, Loading , Input , ProfileNav, Container} from "../../index";
+import {Loader, Loading , Input , ProfileNav, Container, ProfileCard} from "../../index";
 import {
   deleteProfileImage,
   updateProfile,
@@ -84,9 +84,8 @@ function EditProfile() {
   
   return (
     <div className="bg-gray-200 ">
-      <Container className="px-6 sm:px-8 md:px-10 flex justify-center gap-2">
-      <ProfileNav />
-      <div className=" rounded-xl bg-white m-3 shadow-sm border-gray-400 w-full md:w-[70%]  lg:w-[40%] py-3 px-4">
+      <Container className="px-6 pb-8 pt-24 sm:px-8 md:px-10 flex justify-center gap-2">
+      <ProfileCard >
         <div className=" relative">
           <div
             ref={ref}
@@ -245,7 +244,7 @@ function EditProfile() {
           </div>
           
         </form>
-      </div>
+      </ProfileCard>
       </Container>
     </div>
   );

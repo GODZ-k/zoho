@@ -35,10 +35,18 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 
 app.use(express.json())
+const allowedOrigins = ['http://localhost:5173', 'https://zoho-henna.vercel.app'];
 app.use(cors({
   credentials: true,
-  origin:'http://localhost:5173'
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }))
+
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }))
 
